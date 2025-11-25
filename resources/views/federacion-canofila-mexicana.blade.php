@@ -3,7 +3,7 @@
 
 
 @section('content')
-    <div class="-titulo"><p>Federación Canolfila Mexicana</p></div>
+    <div class="-titulo"><h1 class="text-base60">Federación Canolfila Mexicana</h1></div>
 
 
     <div class="m-6 p-6">       
