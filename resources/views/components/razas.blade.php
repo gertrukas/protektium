@@ -9,7 +9,7 @@
             Yorkies
         </p>
 
-        <a href="/fcm">
+        <a href="/razas">
             <button class="-ver-mas txt-2xl inline-block">Conocer más</button>
         </a>
 

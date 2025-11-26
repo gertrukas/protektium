@@ -12,12 +12,17 @@
 
     p{
         margin-top: 1em;
-        font-size: 26px;
+        font-size: 20px;
         @apply text-base10
     }
 
     h1{
-        font-size: 2rem
+        font-size: 2rem;
+    }
+
+    h2{
+        font-size:1.5rem;
+        @apply text-base10 
     }
 
     .-titulo{
@@ -26,6 +31,13 @@
 
     .-titulo p{
         @apply text-base60
+    }
+
+    .-lista{
+        margin-left:4rem;
+        list-style-type: circle;
+        list-style-position: outside;
+        
     }
 
 

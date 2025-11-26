@@ -37,6 +37,23 @@ Route::get('/federacion-canofila-mexicana', function () {
     return view('federacion-canofila-mexicana', compact('title',));
 });
 
+Route::get('/razas', function () {
+    $title = 'Razas pomeranian, shih tzu y yorkies';
+
+    return view('razas', compact('title',));
+});
+
+Route::get('/quienes-somos', function () {
+    $title = 'Romcypets quienes somos';
+
+    return view('somos', compact('title',));
+});
+
+Route::get('/servicios', function () {
+    $title = 'Romcypets servicios';
+
+    return view('servicios', compact('title',));
+});
 
 Route::get('/contacto', ContactForm::class)->name('contacto');
 

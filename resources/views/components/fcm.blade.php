@@ -1,7 +1,7 @@
 <section class="grid grid-cols-1 md:grid-cols-2 gap-8 p-0">
     
     <!-- Left column -->
-    <div class="p-4">
+    <div class="p-4 mt-5">
     <img src='{{ asset('images/federacion-canofila-mexicana.png') }}' class="w-full">
     </div>
 
