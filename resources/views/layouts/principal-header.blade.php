@@ -1,6 +1,6 @@
-        <header>
+        <header class="container">
             <nav class="">
-                <div class=" mx-auto flex flex-wrap items-center justify-between">
+                <div class="flex flex-wrap items-center justify-between">
 
                     <a href="/" class="flex justify-center items-center p-4">
                         <img src='{{ asset('images/romcypets.webp') }}' width="300" height="auto">

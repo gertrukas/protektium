@@ -1,4 +1,4 @@
-<section>
+<section class="container">
     <!--
         <div class="container mx-auto p-0">
             {{-- @livewire('product-card-list', ['title' => 'PROMOCIONES', 'destacadoValue' => 1, 'limit' => 3]) --}}
@@ -19,7 +19,7 @@
             <div class="p-4">
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
                     @forelse ($blogs as $blog)
-
+                        
                         <a href="{{ route('blog.show', ['slug' => $blog->slug]) }}" class="h-full">
                             <div class="bg-white rounded-lg shadow-lg overflow-hidden h-full">
                                 @include('livewire.imagen-blog')

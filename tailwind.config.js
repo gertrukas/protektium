@@ -35,6 +35,10 @@ export default {
                 "close-menu": "url('/images/icon-close.svg')",
                 "open-menu": "url('/images/icon-hamburger.svg')",
             },
+
+            container:{
+                center: true,
+            },
         },
     },
 

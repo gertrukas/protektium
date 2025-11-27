@@ -1,8 +1,9 @@
-<section class="grid grid-cols-1 md:grid-cols-2 gap-0 p-0 bg-base10">
-    
-    <div class="p-4 flex flex-col items-center justify-center text-center ">
 
-        <p class="-razas font-libre text-base60">
+<section class="container grid grid-cols-1 md:grid-cols-2 gap-0 bg-base10 -centrado mt-4 mb-6" style="background-image: url('{{ asset('images/huellitas.webp')}}');background-size: cover;">
+    
+    <div class="p-4 flex flex-col items-center justify-center text-center">
+
+        <p class="-razas font-libre text-base30">
             Pomeranias,<br> 
             Shih Tzu <br>
             y <br>
@@ -16,7 +17,7 @@
     </div>
 
     <!-- Right column -->
-    <div class="p-4">
+    <div class="p-0 m-0">
         
     <img src='{{ asset('images/pomeranian-shih-tzu-yorkie.webp') }}' class="w-full">
        

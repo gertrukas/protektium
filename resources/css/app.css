@@ -51,9 +51,12 @@
 
     .-razas{
         font-size: 48px;
+
     }
 
-
+    .-centrado{
+        @apply  lg:w-3/5  md:w-3/4  sm:w-full
+    }
 
 
     .footer-area {
