@@ -1,4 +1,5 @@
 <section class="container">
+   <!-- Productos -->
     <div class="container mx-auto p-0">
         @livewire('product-card-list', ['title' => 'PROMOCIONES', 'destacadoValue' => 1, 'limit' => 3])
         @livewire('product-card-list', ['title' => 'PRODUCTOS', 'destacadoValue' => 0, 'limit' => 3])

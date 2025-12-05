@@ -7,7 +7,7 @@
         <nav class="flex bg-base30 text-white border border-gray-200 py-3 px-5 rounded-lg" aria-label="Breadcrumb">
             <ol class="inline-flex items-center space-x-1 md:space-x-3">
                 <li class="inline-flex items-center">
-                <a href="#" class="text-sm text-base60 hover:text-base10 inline-flex items-center">
+                <a href="/" class="text-sm text-base60 hover:text-base10 inline-flex items-center">
                     <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
                     Inicio
                 </a>
@@ -22,24 +22,25 @@
         </nav>
     </div>
 
-    <div class="wrapper py-4"><h1 class="text-base10">Criadero responsable, regulado y con amor</h1></div>
+    
 
 
     
     <div class="wrapper -centrado grid grid-cols-1 md:grid-cols-2 gap-2">
+        <div class="py-4 text-center col-span-2"><h1 class="text-base10">Criadero responsable, regulado y con amor</h1></div>
         <div>
             <h2>quienes somos</h2>
             <p>Antes conocidos como Pets Martel, desde 2024 evolucionamos a Romcy Pets, un criadero familiar que nació del amor, la dedicación y el respeto hacia los perros.</p>
+            <p>Con más de 10 años de experiencia, criamos con responsabilidad y ética las razas Pomeranian, Shih Tzu y Yorkshire Terrier, asegurando siempre el bienestar, la salud y el equilibrio emocional de cada cachorro.</p>
         </div>
         <div>
              <img src='{{ asset('images/nancy-romero.webp') }}' class="w-full pt-2">
         </div>
     </div>
+
+
     <div class="wrapper -centrado">
-       
-            <p>Con más de 10 años de experiencia, criamos con responsabilidad y ética las razas Pomeranian, Shih Tzu y Yorkshire Terrier, asegurando siempre el bienestar, la salud y el equilibrio emocional de cada cachorro.</p>
             <p>En Romcy Pets creemos que criar es un acto de amor y compromiso. Cada camada es planeada cuidadosamente, con padres seleccionados por su estructura, temperamento y linaje. Los cachorros crecen en un entorno familiar, rodeados de afecto, socialización y cuidados veterinarios desde sus primeros días de vida.</p>
-        
     </div>
 
     
