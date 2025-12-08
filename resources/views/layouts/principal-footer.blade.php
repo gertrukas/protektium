@@ -30,6 +30,7 @@
 				<div class="uppercase text-white">Redes Sociales</div>
 				<div class="flex justify-start space-x-3">
 					
+					<a href="https://www.facebook.com/Romcy.pets.qro">
 					<button class="w-6 h-6 flex items-center justify-center relative overflow-hidden rounded-full bg-white shadow-md shadow-gray-200 group transition-all duration-300">
 						<svg class="relative z-10 fill-gray-900 transition-all duration-300  xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 72 72" fill="none">
 						<path
@@ -38,7 +39,9 @@
 						</svg>
 					
 					</button>
+					</a>
 
+					<a href="https://www.instagram.com/romcy.pets">
 					<button class="w-6 h-6 flex items-center justify-center rounded-full relative overflow-hidden bg-white shadow-md shadow-gray-200 group transition-all duration-500">
 						<svg class="fill-gray-900 relative z-10 transition-all duration-500 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 51 51" fill="none">
 							<path
@@ -48,7 +51,9 @@
 						</svg>
 						
 					</button>
+					</a>
 
+					<a href="https://www.tiktok.com/@pets.martell">
 					<button class="w-6 h-6 flex items-center justify-center relative overflow-hidden rounded-full bg-white shadow-md
 					 shadow-gray-200 ">
 						<svg class="fill-base10 relative z-10 " xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 42 47" fill="none">
@@ -63,6 +68,7 @@
 						fill="" />
 						</svg>
 					</button>
+					</a>
 					
 				</div>
 			</div>
