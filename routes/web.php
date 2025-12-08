@@ -34,25 +34,25 @@ Route::get('/aviso-de-privacidad', function () {
 Route::get('/federacion-canofila-mexicana', function () {
     $title = 'Federación Canofila Mexicana';
 
-    return view('federacion-canofila-mexicana', compact('title',));
+    return view('federacion-canofila-mexicana', compact('title'));
 });
 
 Route::get('/razas', function () {
     $title = 'Razas pomeranian, shih tzu y yorkies';
 
-    return view('razas', compact('title',));
+    return view('razas', compact('title'));
 });
 
 Route::get('/quienes-somos', function () {
     $title = 'Romcypets quienes somos';
 
-    return view('somos', compact('title',));
+    return view('somos', compact('title'));
 });
 
 Route::get('/servicios', function () {
     $title = 'Romcypets servicios';
 
-    return view('servicios', compact('title',));
+    return view('servicios', compact('title'));
 });
 
 Route::get('/contacto', ContactForm::class)->name('contacto');
@@ -77,8 +77,6 @@ Route::get('/productos', Products::class)->name('products');
 Route::get('/productos/{slug}', ShowProduct::class)->name('product.show');
 require __DIR__.'/auth.php';
 
-Route::get('/fcm', function(){
+Route::get('/fcm', function () {
     return view('fcm');
 });
-
-

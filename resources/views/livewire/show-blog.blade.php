@@ -7,20 +7,38 @@
         </a>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-        <div class="flex flex-col gap-4">
+        <!-- COLUMNA IZQUIERDA: Imagen + autor/fecha -->
+        <div class="flex flex-col gap-6">
+            <!-- Imagen -->
             @include('livewire.imagen-blog')
-            <div class="flex justify-between">
-                {{ $blog->author->name }}
-                {{ $blog->published_at }}
 
+            <!-- Autor y fecha en un solo renglón -->
+            <div class="flex justify-between items-center text-sm text-gray-600">
+                <div class="font-medium text-gray-900">
+                    {{ $blog->author->name }}
+                </div>
+                <div>
+                    {{ $blog->published_at->format('d/m/Y') }}
+                    <!-- o: {{ $blog->published_at->translatedFormat('j \de F \de Y') }} -->
+                </div>
             </div>
         </div>
 
+        <!-- COLUMNA DERECHA: Título, descripción y contenido -->
+        <div class="flex flex-col gap-6">
+            <h1 class="text-3xl md:text-4xl font-bold text-center md:text-left">
+                {{ $blog->title }}
+            </h1>
 
-        <div class="flex flex-col gap-4">
-            <h1 class="text-4xl font-bold text-center">{{ $blog->title }}</h1>
-            <div class="text-gray-700 text-lg">{!! $blog->description !!}</div>
-            <div class="text-gray-700 text-lg">{!! $blog->content !!}</div>
+            @if ($blog->description)
+                <div class="text-gray-700 text-lg leading-relaxed">
+                    {!! $blog->description !!}
+                </div>
+            @endif
+
+            <div class="prose prose-lg max-w-none text-gray-700">
+                {!! $blog->content !!}
+            </div>
         </div>
     </div>
 </div>

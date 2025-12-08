@@ -2,8 +2,8 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
-use App\Models\Product; // Asegúrate de importar el modelo Product
+use App\Models\Product;
+use Livewire\Component; // Asegúrate de importar el modelo Product
 
 class ProductCardList extends Component
 {
@@ -15,10 +15,17 @@ class ProductCardList extends Component
 
     public function render()
     {
-        $items = Product::where('destacado', $this->destacadoValue)
-                        ->limit($this->limit)
-                        ->inRandomOrder()
-                        ->get();
+        if ($this->destacadoValue) {
+            $items = Product::where('destacado', $this->destacadoValue)
+                ->limit($this->limit)
+                ->inRandomOrder()
+                ->get();
+        } else {
+
+            $items = Product::limit($this->limit)
+                ->inRandomOrder()
+                ->get();
+        }
 
         return view('livewire.product-card-list', [
             'items' => $items,

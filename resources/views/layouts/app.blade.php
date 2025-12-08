@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ $title ?? 'Romcypets'}}</title>
+    <title>{{ $title ?? 'Romcypets' }}</title>
 
     <link rel="icon" href="{{ asset('images/favicon-32x32.png') }}" sizes="any">
     <!-- Fonts -->
@@ -20,7 +20,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
 
@@ -29,7 +29,7 @@
 </head>
 
 <body class="font-principal bright-red flex flex-col min-h-screen bg-base60">
-    @include('layouts.principal-header')
+    @include('layouts.app-header')
 
     @yield('content')
 

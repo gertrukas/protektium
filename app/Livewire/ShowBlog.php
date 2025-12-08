@@ -2,8 +2,8 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
-use App\Models\Blog; // Asegúrate de tener e importar tu modelo Blog
+use App\Models\Blog;
+use Livewire\Component; // Asegúrate de tener e importar tu modelo Blog
 
 class ShowBlog extends Component
 {
@@ -14,12 +14,11 @@ class ShowBlog extends Component
     {
 
         $this->blog = Blog::where('slug', $slug)
-                        ->firstOrFail();
+            ->firstOrFail();
     }
 
     public function render()
     {
-        return view('livewire.show-blog')
-            ->layout('layouts.principal');
+        return view('livewire.show-blog');
     }
 }

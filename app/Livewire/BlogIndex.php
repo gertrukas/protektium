@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Livewire;
 
 use App\Models\Blog;
@@ -12,12 +13,13 @@ class BlogIndex extends Component
     public $isPublished = null;
 
     public $search = '';
-    public $title = "COMUNICADOS";
+
+    public $title = 'COMUNICADOS';
 
     /**
      * Monta el componente recibiendo el parámetro de publicación.
      *
-     * @param int|null $isPublished
+     * @param  int|null  $isPublished
      * @return void
      */
     public function mount($isPublished = null)
@@ -25,7 +27,7 @@ class BlogIndex extends Component
         if (in_array($isPublished, [0, 1])) {
             $this->isPublished = $isPublished;
         } else {
-            $this->isPublished = 1; 
+            $this->isPublished = 1;
         }
     }
 
@@ -33,7 +35,6 @@ class BlogIndex extends Component
     {
         $this->resetPage();
     }
-
 
     /**
      * Renderiza la vista del componente con la lista paginada de blogs.
@@ -44,14 +45,14 @@ class BlogIndex extends Component
     {
         $query = Blog::query();
 
-        if (!empty($this->search)) {
-            $query->where('title', 'like', '%' . $this->search . '%');
+        if (! empty($this->search)) {
+            $query->where('title', 'like', '%'.$this->search.'%');
         }
 
         $blogs = $query->latest('published_at')->paginate(6);
 
         return view('livewire.blog-index', [
             'blogs' => $blogs,
-        ])->layout('layouts.principal');
+        ]);
     }
 }
