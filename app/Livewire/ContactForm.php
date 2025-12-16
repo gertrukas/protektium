@@ -35,6 +35,12 @@ class ContactForm extends Component
         'comments.required' => 'Los comentarios son obligatorios.',
     ];
 
+
+    public function render()
+    {
+        return view('livewire.contact-form');
+    }
+
     public function submit()
     {
         $this->validate();
@@ -75,21 +81,15 @@ class ContactForm extends Component
             $this->successMessage = '¡Gracias por contactarnos! Te responderemos pronto.';
 
             $this->reset(['name', 'email', 'phone', 'comments']);
-
         } catch (\Exception $e) {
             // Registrar el error en los logs
-            Log::error('Error al procesar el formulario de contacto: '.$e->getMessage());
+            Log::error('Error al procesar el formulario de contacto: ' . $e->getMessage());
 
             // Mostrar mensaje de error al usuario
             $this->successMessage = '';
-            Log::info('Error: '.$e);
+            Log::info('Error: ' . $e);
 
             session()->flash('error', 'Hubo un error al enviar tu mensaje. Por favor, intenta nuevamente o contáctanos directamente.');
         }
-    }
-
-    public function render()
-    {
-        return view('livewire.contact-form')->layout('layouts.principal');
     }
 }
