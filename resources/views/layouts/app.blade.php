@@ -17,8 +17,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ $title ?? 'Romcypets' }}</title>
-
-
     <link rel="canonical" href="https://romcypets.com{{ $canonical }}" />
 
     <meta name="description" content="">
