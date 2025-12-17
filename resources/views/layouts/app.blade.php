@@ -18,6 +18,10 @@
 
     <title>{{ $title ?? 'Romcypets' }}</title>
 
+
+    <link rel="canonical" href="https://romcypets.com{{ $canonical }}" />
+
+    <meta name="description" content="">
     <link rel="icon" href="{{ asset('images/romcypets.ico') }}" sizes="any">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">

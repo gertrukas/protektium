@@ -26,36 +26,41 @@ Route::get('/comunicados', BlogIndex::class)->name('blogs.index');
 
 Route::get('/aviso-de-privacidad', function () {
     $title = 'Aviso de privacidad';
-    $otra_var = 5;
+    $canonical = '/aviso-de-privacidad';
 
-    return view('aviso-de-privacidad', compact('title', 'otra_var'));
+    return view('aviso-de-privacidad', compact('title', 'canonical'));
 });
 
 Route::get('/federacion-canofila-mexicana', function () {
     $title = 'Federación Canofila Mexicana';
+    $canonical = '/federacion-canofila-mexicana';
 
-    return view('federacion-canofila-mexicana', compact('title'));
+    return view('federacion-canofila-mexicana', compact('title', 'canonical'));
 });
 
 Route::get('/razas', function () {
     $title = 'Razas pomeranian, shih tzu y yorkies';
+    $canonical = '/razas';
 
-    return view('razas', compact('title'));
+    return view('razas', compact('title', 'canonical'));
 });
 
 Route::get('/quienes-somos', function () {
-    $title = 'Romcypets quienes somos';
+    $title = 'quienes somos';
+    $canonical = '/quienes-somos';
 
-    return view('somos', compact('title'));
+    return view('somos', compact('title', 'canonical'));
 });
 
 Route::get('/servicios', function () {
     $title = 'Romcypets servicios';
+    $canonical = '/servicios';
 
-    return view('servicios', compact('title'));
+    return view('servicios', compact('title', 'canonical'));
 });
 
 Route::get('/contacto', ContactForm::class)->name('contacto');
+
 
 Route::get('/dashboard', function () {
     if (Auth::check()) {

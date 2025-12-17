@@ -28,6 +28,7 @@
     
     <title>{{ config('app.name', 'XsBeta') }}</title>
 
+    <link rel="canonical" href="https://romcypets.com/" />
 
     <link rel="icon" href="{{ asset('images/favicon-32x32.png') }}" sizes="any">
     <!-- Fonts -->
