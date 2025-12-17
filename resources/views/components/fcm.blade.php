@@ -2,7 +2,7 @@
     
     <!-- Left column -->
     <div class="p-4 mt-5">
-        <img src='{{ asset('images/federacion-canofila-mexicana.png') }}' class="w-full">
+        <img src='{{ asset('images/federacion-canofila-mexicana.png') }}' class="w-full" alt="federacion canofila mexicana">
     </div>
 
     <!-- Right column -->

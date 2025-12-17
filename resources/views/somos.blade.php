@@ -34,7 +34,7 @@
             <p>Con más de 10 años de experiencia, criamos con responsabilidad y ética las razas Pomeranian, Shih Tzu y Yorkshire Terrier, asegurando siempre el bienestar, la salud y el equilibrio emocional de cada cachorro.</p>
         </div>
         <div>
-             <img src='{{ asset('images/nancy-romero.webp') }}' class="w-full pt-2">
+             <img src='{{ asset('images/nancy-romero.webp') }}' class="w-full pt-2" alt="romcy pets Nancy Romero">
         </div>
     </div>
 
@@ -48,7 +48,7 @@
 
      <div class="wrapper -centrado grid grid-cols-1 md:grid-cols-2 gap-2 pt-4">
          <div>
-             <img src='{{ asset('images/shih-tzu.webp') }}' class="w-full pt-2">
+             <img src='{{ asset('images/shih-tzu.webp') }}' class="w-full pt-2" alt="romcy pets Shih Tzu cachorros">
         </div>
         <div class="">
             <h2  class="">Misión </h2>
@@ -64,7 +64,7 @@
             <p>Ser un criadero que inspire confianza, respeto y conexión emocional entre personas y perros, reconocido por la dedicación, ética y crianza holística. Queremos que cada cachorro de Romcy Pets sea un reflejo de equilibrio, alegría y amor, transmitiendo a su familia felicidad y bienestar en cada etapa de su vida.</p>
         </div>
         <div>
-             <img src='{{ asset('images/nancy-romero-razas.webp') }}' class="w-full pt-2">
+             <img src='{{ asset('images/nancy-romero-razas.webp') }}' class="w-full pt-2" alt="romcy pets Shih Tzu y Yorkie">
         </div>
        
     </div>
@@ -75,7 +75,7 @@
             <h2>REGULACIÓN Y RESPALDO</h2>
             <p>Nuestro criadero está regulado por la Federación Canófila Mexicana (FCM) y dado de alta ante Hacienda, operando bajo lineamientos legales y fiscales en regla.</p>
             <div class="p-4 mt-5">
-        <img src='{{ asset('images/federacion-canofila-mexicana.png') }}' class="w-full">
+        <img src='{{ asset('images/federacion-canofila-mexicana.png') }}' class="w-full" alt="romcy pets federacion canofila mexicana">
     </div>
             <p>Este respaldo garantiza que nuestros procesos de cría cumplen con los estándares de bienestar, trazabilidad y transparencia establecidos por la FCM.</p>
             <p>Todos nuestros cachorros cuentan con opción a Pedigree o Certificado de Pureza Racial, y pueden ser verificados mediante el número de registro o microchip ante la Federación.</p>

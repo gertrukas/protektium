@@ -3,7 +3,7 @@
                 <div class="flex flex-wrap items-center justify-between">
 
                     <a href="/" class="flex justify-center items-center p-4">
-                        <img src='{{ asset('images/romcypets.webp') }}' width="300" height="auto">
+                        <img src='{{ asset('images/romcypets.webp') }}' width="300" height="auto" alt="romcy pets">
                     </a>
 
                     <button data-collapse-toggle="mobile-menu" type="button"

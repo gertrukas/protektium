@@ -37,7 +37,7 @@
             <div class="py-4 text-center "><h1 class="text-base10">SALUD, BIENESTAR Y GARANTÍAS</h1></div>
 
             <div class="col-span-2">
-                <img src='{{ asset('images/servicios.webp') }}' class="w-1/2 float-right pt-2">
+                <img src='{{ asset('images/servicios.webp') }}' class="w-1/2 float-right pt-2" alt="romcy pets servicios pomeranian">
                 <P>El bienestar es nuestra prioridad. Todos nuestros cachorros se entregan con:</P>
                 <P>En Romcy Pets creemos que cada cachorro merece un cuidado completo, amoroso y adaptado a sus necesidades. Por eso, nuestros cachorros se entregan con todo lo necesario para que inicien su vida en un entorno seguro, equilibrado y lleno de amor:</P>
                 <ul class="-lista">
