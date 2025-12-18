@@ -1,5 +1,10 @@
 User-agent: *
+Allow: /
 Disallow: /login
-Disallow: /admin/login
 
+Disallow: /admin/login
+Disallow: /*?
+
+# Sitemap
+Sitemap: https://romcypets.com/sitemap.xml
 
