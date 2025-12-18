@@ -12,6 +12,7 @@ class Welcome extends Component
      *
      * @return \Illuminate\Contracts\View\View
      */
+    
     public function render()
     {
         $blogs = Blog::where('is_published', 1)
@@ -21,6 +22,8 @@ class Welcome extends Component
 
         return view('livewire.welcome', [
             'blogs' => $blogs,
-        ])->layout('layouts.principal');
+        ])->layout('layouts.principal',[
+            'title' => 'RomcyPets criadero responsable',
+        ]);
     }
 }

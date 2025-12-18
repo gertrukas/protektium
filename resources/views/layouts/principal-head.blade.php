@@ -1,3 +1,5 @@
+
+
 <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D09F0VF7V0"></script>
     <script>
@@ -12,10 +14,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('title', 'Romcy pets') }}</title>
+    <title>{{ $title ?? 'Romcypets criadero responsable' }}</title>
 
-    <link rel="canonical" href="https://romcypets.com/" />
-    <meta name="description" content="criadero familiar que nació del amor, dedicación y respeto hacia los perros. Con más de 10 años de experiencia, criamos con responsabilidad y ética las razas Pomeranian, Shih Tzu y Yorkshire Terrier.">
+    <link rel="canonical" href="https://romcypets.com{{ $canonical ?? '' }} " />
+    <meta name="description" content="{{ $_descripcion ?? 'criadero familiar que nació del amor, dedicación y respeto hacia los perros. Con más de 10 años de experiencia, criamos con responsabilidad y ética las razas Pomeranian, Shih Tzu y Yorkshire Terrier.' }}">
+    
     <meta name="keywords" content="criadero, perros, Pomeranian, Shih Tzu, Yorkshire Terrier, criador, perros, perros de compañía, perros de mascota, criador de perros">
 
     <meta name="robots" content="index, follow">

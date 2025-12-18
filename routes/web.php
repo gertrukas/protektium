@@ -48,8 +48,9 @@ Route::get('/razas', function () {
 Route::get('/quienes-somos', function () {
     $title = 'quienes somos';
     $canonical = '/quienes-somos';
+    $_descripcion = 'Somos un criadero familiar que nació del amor, la dedicación y el respeto hacia los perros.';
 
-    return view('somos', compact('title', 'canonical'));
+    return view('somos', compact('title', 'canonical', '_descripcion'));
 });
 
 Route::get('/servicios', function () {
