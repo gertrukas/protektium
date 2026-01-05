@@ -24,6 +24,8 @@ class Welcome extends Component
             'blogs' => $blogs,
         ])->layout('layouts.principal',[
             'title' => 'RomcyPets criadero responsable',
+            'canonical' => '',
+            '_descripcion' => 'Criadero familiar que nació del amor, dedicación y respeto hacia los perros.',
         ]);
     }
 }

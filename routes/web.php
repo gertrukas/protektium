@@ -27,22 +27,25 @@ Route::get('/comunicados', BlogIndex::class)->name('blogs.index');
 Route::get('/aviso-de-privacidad', function () {
     $title = 'Aviso de privacidad';
     $canonical = '/aviso-de-privacidad';
+    $_descripcion = 'En Romcy pets reespetamos las regulaciones para la protección de datos';
 
-    return view('aviso-de-privacidad', compact('title', 'canonical'));
+    return view('aviso-de-privacidad', compact('title', 'canonical', '_descripcion'));
 });
 
 Route::get('/federacion-canofila-mexicana', function () {
     $title = 'Federación Canofila Mexicana';
     $canonical = '/federacion-canofila-mexicana';
+    $_descripcion = 'Nuestro criadero está regulado por la Federación Canófila Mexicana (FCM), operando bajo lineamientos legales y fiscales en regla.';
 
-    return view('federacion-canofila-mexicana', compact('title', 'canonical'));
+    return view('federacion-canofila-mexicana', compact('title', 'canonical', '_descripcion'));
 });
 
 Route::get('/razas', function () {
     $title = 'Razas pomeranian, shih tzu y yorkies';
     $canonical = '/razas';
+    $_descripcion = 'Las razas que criamos son: Pomerania, Shih Tzu y Yorkie';
 
-    return view('razas', compact('title', 'canonical'));
+    return view('razas', compact('title', 'canonical', '_descripcion'));
 });
 
 Route::get('/quienes-somos', function () {
@@ -56,8 +59,9 @@ Route::get('/quienes-somos', function () {
 Route::get('/servicios', function () {
     $title = 'Romcypets servicios';
     $canonical = '/servicios';
+    $_descripcion = 'En Romcy Pets creemos que cada cachorro merece un cuidado completo, amoroso y adaptado a sus necesidades.';
 
-    return view('servicios', compact('title', 'canonical'));
+    return view('servicios', compact('title', 'canonical', '_descripcion'));
 });
 
 Route::get('/contacto', ContactForm::class)->name('contacto');

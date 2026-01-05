@@ -16,7 +16,8 @@
 
     <title>{{ $title ?? 'Romcypets criadero responsable' }}</title>
 
-    <link rel="canonical" href="https://romcypets.com{{ $canonical ?? '' }} " />
+    <link rel="canonical" href="https://romcypets.com{{ $canonical ?? '' }}" />
+
     <meta name="description" content="{{ $_descripcion ?? 'criadero familiar que nació del amor, dedicación y respeto hacia los perros. Con más de 10 años de experiencia, criamos con responsabilidad y ética las razas Pomeranian, Shih Tzu y Yorkshire Terrier.' }}">
     
     <meta name="keywords" content="criadero, perros, Pomeranian, Shih Tzu, Yorkshire Terrier, criador, perros, perros de compañía, perros de mascota, criador de perros">
@@ -30,7 +31,7 @@
     
    
 
-    <link rel="icon" href="{{ asset('images/favicon-32x32.png') }}" sizes="any">
+    <link rel="icon" href="{{ asset('images/romcypets.ico') }}" sizes="any">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
