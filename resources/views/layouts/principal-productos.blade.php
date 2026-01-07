@@ -12,9 +12,14 @@
 
     @include('components.home-hero-section')
 
+    {{-- @include('components.fcm')
+
+    @include('components.razas') --}}
+
 
     <div class="">
-        {{-- $slot --}}
+        {{ $slot }}
+
     </div>
 
     @include('layouts.principal-footer')

@@ -20,10 +20,11 @@ class BlogSeeder extends Seeder
         $authors = Author::all();
         $categories = Category::all();
 
-        Blog::factory()->count10)->create([
+
+        Blog::factory()->count(10)->create([
             'author_id' => function () use ($authors) {
                 return $authors->random()->id;
-            },
+            }
         ])->each(function (Blog $blog) use ($categories) {
             if ($categories->isNotEmpty()) {
                 $blog->categories()->attach(

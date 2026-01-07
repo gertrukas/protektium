@@ -19,7 +19,7 @@ class Products extends Component
 
     public function mount()
     {
-         $this->categories = ProductCategory::with('products')->get();
+        $this->categories = ProductCategory::with('products')->get();
     }
 
     public function render()
@@ -43,7 +43,7 @@ class Products extends Component
 
         return view('livewire.products', [
             'products' => $products,
-        ])->layout('layouts.principal');
+        ])->layout('layouts.principal-productos');
     }
 
     // Nuevo método para alternar la visibilidad del menú
