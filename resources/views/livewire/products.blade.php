@@ -10,6 +10,7 @@
         </div>
     </header>
     <nav class="flex justify-center items-center gap-4 mb-8">
+        <span class="font-bold mr-2 text-gray-600">Categorías:</span>
         <a href="#" wire:click.prevent="filterByCategory('all')"
             class="p-2 border rounded-full {{ $selectedCategory == 'all' ? 'bg-blue-500 text-white' : '' }}">Todas</a>
         @foreach ($categories->take(6) as $category)
@@ -39,6 +40,21 @@
             </div>
         @endif
     </nav>
+
+    <nav class="flex justify-center items-center gap-4 mb-8">
+        <span class="font-bold mr-2 text-gray-600">Marcas:</span>
+        <a href="#" wire:click.prevent="filterByBrand('all')"
+            class="p-1 px-3 border text-sm rounded-lg {{ $selectedBrand == 'all' ? 'bg-blue-600 text-white' : '' }}">Todas</a>
+
+        @foreach ($brands as $brand)
+            <a href="#" wire:click.prevent="filterByBrand({{ $brand->id }})"
+                class="p-2 border rounded-full {{ $selectedBrand == $brand->id ? 'bg-green-500 text-white' : '' }}">
+                {{ $brand->name }}
+            </a>
+        @endforeach
+    </nav>
+
+
     <hr class="mb-8">
     <div class="flex justify-between items-center mb-4">
         {{-- Condición para mostrar el select solo si el total de productos es mayor a 12 --}}
