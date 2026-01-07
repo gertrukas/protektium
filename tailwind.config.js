@@ -16,19 +16,24 @@ export default {
             fontFamily: {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
                 principal: ['"Be Vietnam Pro"', "sans-serif"],
-                libre: ["'Libre Baskerville'", "serif"],
+                montserrat: ['"Montserrat"', "sans-serif"],
             },
             colors: {
                 "azul" : "#384985",
-                "base10": "#532A12",
-                "base30": "#AA8E85",
-                "base60": "#FEECE3",
+                "base10": "#000000",
+                "base30": "#F7CC1C",
+                "base60": "#ffffff",
+                "stone-gray": "hsl(0, 0%, 17%)",
+                "stone-light-gray": "hsl(0, 0%, 59%)",
+                "amber-950": "hsl(40, 100%, 10%)",
                 "bright-red": "hsl(12, 88%, 59%)",
                 "dark-blue": "hsl(228, 39%, 23%)",
                 "dark-grayish-blue": "hsl(227, 12%, 61%)",
                 "very-dark-blue": "hsl(233, 12%, 13%)",
                 "very-pale-red": "hsl(13, 100%, 96%)",
                 "vary-light-gray": "hsl(0, 0%, 98%)",
+                "amarillofdo": "#4F420E",
+                "amarilloborder": "#AA8E1E",
             },
 
             backgroundImage: {

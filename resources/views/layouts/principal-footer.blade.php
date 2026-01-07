@@ -1,65 +1,95 @@
-<footer class="container px-0 divide-y bg-base10">
 
-	<div class="flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
+<footer class="bg-gray-800 text-white mt-10">
+  <div class="container mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- Columna 1 -->
+      <div class="col-span-1">
+        <a href="/" class=" bg-base30"><img src='{{ asset('images/protektium.webp') }}' alt="RomcyPets" class="" ></a>
+		<p class="text-gray-400 text-sm mt-4">Líderes en equipos de protección industrial comprometidos con la seguridad y bienestar de los trabajadores en todos los sectores industriales.</p>
+        
+      </div>
 
-		<div class="lg:w-1/3 flex items-start ml-4">
-            <a href="/" class=" bg-base30"><img src='{{ asset('images/romcypets.webp') }}' alt="RomcyPets" class=" p-4" ></a>
+      <!-- Columna 2 -->
+      <div class="col-span-1">
+        
+        <nav class="">
+			<h2 class="text-white pb-4">Descubre</h2>
+				<ul class="text-sm ">
+					<li><a href="/quienes-somos" class="hover:text-base30 transition-colors duration-300 text-white">Somos</a></li>
+					<li><a href="/productos" class="hover:text-base30 transition-colors duration-300 text-white">productos</a></li>
+					<li><a href="/contacto" class="hover:text-base30 transition-colors duration-300 text-white">Contacto</a></li>
+					
+				</ul>
+			</nav>
+      </div>
+
+      <!-- Columna 3 -->
+      <div class="col-span-1">
+        
+    	<h2 class="text-white">Servicios</h2>
+		<ul class="text-sm">
+			<li><p class="text-gray-400 text-sm">Asesoría especializada</p></li>
+			<li><span class="text-gray-400 text-sm">Capacitación en seguridad</span></li>
+			<li><span class="text-gray-400 text-sm">Mantenimiento de equipos</span></li>
+			<li><span class="text-gray-400 text-sm">Certificaciones</span></li>
+			<li><span class="text-gray-400 text-sm">Garantía extendida</span></li>
+		</ul>
+      </div>
+
+      <!-- Columna 4 -->
+      <div class="col-span-1">
+        <h3 class="text-lg font-semibold mb-4">Información de contacto</h3>
+
+		<div class="max-w-sm w-full lg:max-w-full lg:flex pb-3">
+			<div class="flex text-base30">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+					<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+				</svg>
+			</div>
+			<div class="text-gray-400 text-sm ml-2">
+				Mirador de querétaro 13 - 43
+				<br>
+				Col. Lomas de Casa Blanca
+				<br>
+				C.P. 76090 Querétaro, Qro.
+			</div>
 		</div>
 
-		<div class="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4 px-4">
-			<div class="space-y-3">
-				<h3 class="text-xl font-semibold mb-2 border-b-2 border-orange-500 pb-1 inline-block text-white">Descubre</h3>
-                <nav>
-                    <ul class="text-sm space-y-1">
-                        <li><a href="/quienes-somos" class="hover:text-orange-500 transition-colors duration-300 text-white">Somos</a></li>
-                        <li><a href="/servicios" class="hover:text-orange-500 transition-colors duration-300 text-white">Servicios</a></li>
-                        <li><a href="/contacto" class="hover:text-orange-500 transition-colors duration-300 text-white">Contacto</a></li>
-                        
-                    </ul>
-                </nav>
+		<div class="max-w-sm w-full lg:max-w-full lg:flex pb-3">
+			<div class="flex text-base30">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+				</svg>
+
 			</div>
-			<div class="space-y-3">
-				
-			</div>
-			<div class="space-y-3">
-				
-			</div>
-			<div class="space-y-3 mr-4">
-                <img src='{{ asset('images/feliz-navidad.webp') }}' alt="RomcyPets" class="h-auto w-auto mr-4">
-
-				<div class="uppercase text-white">Redes Sociales</div>
-				<div class="flex justify-start space-x-3">
-					
-					<a href="https://www.facebook.com/Romcy.pets.qro">
-					<button id="facebook" class="w-6 h-6 flex items-center justify-center relative overflow-hidden rounded-full bg-white shadow-md shadow-gray-200 group transition-all duration-300">
-						<svg class="relative z-10 fill-gray-900 transition-all duration-300  xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 72 72" fill="none">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M240 363.3L240 576L356 576L356 363.3L442.5 363.3L460.5 265.5L356 265.5L356 230.9C356 179.2 376.3 159.4 428.7 159.4C445 159.4 458.1 159.8 465.7 160.6L465.7 71.9C451.4 68 416.4 64 396.2 64C289.3 64 240 114.5 240 223.4L240 265.5L174 265.5L174 363.3L240 363.3z"/></svg>
-					
-					</button>
-					</a>
-
-					<a href="https://www.instagram.com/romcypets_com/" target="_blank" rel="noopener noreferrer">
-						<button id="instagram"
-							class="w-6 h-6 flex items-center justify-center relative overflow-hidden rounded-full bg-white shadow-md shadow-gray-200 group transition-all duration-300">
-							
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M320.3 205C256.8 204.8 205.2 256.2 205 319.7C204.8 383.2 256.2 434.8 319.7 435C383.2 435.2 434.8 383.8 435 320.3C435.2 256.8 383.8 205.2 320.3 205zM319.7 245.4C360.9 245.2 394.4 278.5 394.6 319.7C394.8 360.9 361.5 394.4 320.3 394.6C279.1 394.8 245.6 361.5 245.4 320.3C245.2 279.1 278.5 245.6 319.7 245.4zM413.1 200.3C413.1 185.5 425.1 173.5 439.9 173.5C454.7 173.5 466.7 185.5 466.7 200.3C466.7 215.1 454.7 227.1 439.9 227.1C425.1 227.1 413.1 215.1 413.1 200.3zM542.8 227.5C541.1 191.6 532.9 159.8 506.6 133.6C480.4 107.4 448.6 99.2 412.7 97.4C375.7 95.3 264.8 95.3 227.8 97.4C192 99.1 160.2 107.3 133.9 133.5C107.6 159.7 99.5 191.5 97.7 227.4C95.6 264.4 95.6 375.3 97.7 412.3C99.4 448.2 107.6 480 133.9 506.2C160.2 532.4 191.9 540.6 227.8 542.4C264.8 544.5 375.7 544.5 412.7 542.4C448.6 540.7 480.4 532.5 506.6 506.2C532.8 480 541 448.2 542.8 412.3C544.9 375.3 544.9 264.5 542.8 227.5zM495 452C487.2 471.6 472.1 486.7 452.4 494.6C422.9 506.3 352.9 503.6 320.3 503.6C287.7 503.6 217.6 506.2 188.2 494.6C168.6 486.8 153.5 471.7 145.6 452C133.9 422.5 136.6 352.5 136.6 319.9C136.6 287.3 134 217.2 145.6 187.8C153.4 168.2 168.5 153.1 188.2 145.2C217.7 133.5 287.7 136.2 320.3 136.2C352.9 136.2 423 133.6 452.4 145.2C472 153 487.1 168.1 495 187.8C506.7 217.3 504 287.3 504 319.9C504 352.5 506.7 422.6 495 452z"/></svg>
-						</button>
-					</a>
-
-
-					<a href="https://www.tiktok.com/@pets.martell">
-					<button id="tiktok" class="w-6 h-6 flex items-center justify-center relative overflow-hidden rounded-full bg-white shadow-md
-					 shadow-gray-200 ">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M544.5 273.9C500.5 274 457.5 260.3 421.7 234.7L421.7 413.4C421.7 446.5 411.6 478.8 392.7 506C373.8 533.2 347.1 554 316.1 565.6C285.1 577.2 251.3 579.1 219.2 570.9C187.1 562.7 158.3 545 136.5 520.1C114.7 495.2 101.2 464.1 97.5 431.2C93.8 398.3 100.4 365.1 116.1 336C131.8 306.9 156.1 283.3 185.7 268.3C215.3 253.3 248.6 247.8 281.4 252.3L281.4 342.2C266.4 337.5 250.3 337.6 235.4 342.6C220.5 347.6 207.5 357.2 198.4 369.9C189.3 382.6 184.4 398 184.5 413.8C184.6 429.6 189.7 444.8 199 457.5C208.3 470.2 221.4 479.6 236.4 484.4C251.4 489.2 267.5 489.2 282.4 484.3C297.3 479.4 310.4 469.9 319.6 457.2C328.8 444.5 333.8 429.1 333.8 413.4L333.8 64L421.8 64C421.7 71.4 422.4 78.9 423.7 86.2C426.8 102.5 433.1 118.1 442.4 131.9C451.7 145.7 463.7 157.5 477.6 166.5C497.5 179.6 520.8 186.6 544.6 186.6L544.6 274z"/></svg>
-					</button>
-					</a>
-					
-				</div>
+			<div class="text-gray-400 text-sm ml-2">
+				442 104 9006	
 			</div>
 		</div>
-	</div>
-	<div class="text-base10 text-sm mt-2 text-center bg-base60 py-2 mb-0">
-            Copyright {{ date('Y') }} - <a href="/aviso-de-privacidad">Aviso de privacidad</a>
-        </div>
+
+		<div class="max-w-sm w-full lg:max-w-full lg:flex pb-3">
+			<div class="flex text-base30">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+				</svg>
+
+			</div>
+			<div class="text-gray-400 text-sm ml-2">
+				info@protektium.com
+				
+			</div>
+		</div>
+        
+		
+      </div>
+    </div>
+
+    <!-- Sección de derechos de autor -->
+    <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400 text-sm ml-2">
+	  Copyright {{ date('Y') }} - <a href="/aviso-de-privacidad" class="text-grey-400 hover:text-white">Aviso de privacidad</a>
+    </div>
+  </div>
 </footer>
+
 

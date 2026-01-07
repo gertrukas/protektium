@@ -20,7 +20,7 @@ class BlogSeeder extends Seeder
         $authors = Author::all();
         $categories = Category::all();
 
-        Blog::factory()->count(50)->create([
+        Blog::factory()->count10)->create([
             'author_id' => function () use ($authors) {
                 return $authors->random()->id;
             },

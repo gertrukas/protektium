@@ -1,6 +1,6 @@
     {{-- <div class="grid grid-cols-1 md:grid-cols-[25%_75%] gap-0">
         <div class="p-4 text-right leading-none">
-            <h1 class="font-libre">Comunicados</h1>
+            <h1 class="font-montserrat">Comunicados</h1>
             <br>
             <a href="{{ route('blogs.index') }}">
                 VER TODOS ->

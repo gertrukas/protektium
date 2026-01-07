@@ -12,7 +12,7 @@
 
     p{
         margin-top: 1em;
-        font-size: 20px;
+        font-size: 16px;
         @apply text-base10
     }
 
@@ -26,7 +26,7 @@
     }
 
     .-titulo{
-        @apply bg-base10 text-base60 text-right p-4 font-libre text-xl mt-2
+        @apply bg-base10 text-base60 text-right p-4 font-montserrat text-xl mt-2
     }
 
     .-titulo p{
@@ -35,6 +35,11 @@
 
     .-breadcrumb{
         @apply  border-t border-b border-base10 pl-4
+    }
+
+    .-copy{
+        font-size:12px;
+        color: white;
     }
 
     .-lista{
@@ -55,6 +60,14 @@
         @apply bg-bright-red text-vary-light-gray block w-max py-4 px-12 rounded-full;
     }
 
+    .-lideres-button{
+        border: 1px solid #AA8E1E;
+        color: #AA8E1E;
+        background-color: #4F420E;
+        font-size: 12px;
+
+    }
+    
     .-razas{
         font-size: 48px;
     }
@@ -64,17 +77,7 @@
     }
 
 
-    .footer-area {
-        grid-template-areas:
-            "social-media"
-            "copy";
-    }
-
-    .footer-area-md {
-        grid-template-areas:
-            "social-media   copy"
-        ;
-    }
+    
 
     .slider{
         @apply grid;
@@ -125,3 +128,6 @@
 .-titulo{
     @apply text-orange-500;
 }
+
+
+

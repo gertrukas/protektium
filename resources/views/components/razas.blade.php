@@ -3,7 +3,7 @@
     
     <div class="p-4 flex flex-col items-center justify-center text-center">
 
-        <h1 class="-razas font-libre text-base30">
+        <h1 class="-razas font-montserrat text-base30">
             Pomeranian,<br> 
             Shih Tzu <br>
             y <br>

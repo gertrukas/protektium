@@ -12,11 +12,7 @@
 
         @include('components.home-hero-section')
 
-        @include('components.fcm')
-
-        @include('components.razas')
-
-
+       
         <div class="">
             {{-- $slot --}}
         </div>
