@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->comment('Nombre');
             $table->string('slug')->unique();
+            $table->foreignId('brand_id')->constrained()->onDelete('cascade')->comment('Marca');
             $table->text('description')->nullable()->comment('Descripcióno');
             $table->string('short_description')->nullable()->comment('Descripción corta');
             $table->decimal('price', 10, 2)->comment('Precio');

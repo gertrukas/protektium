@@ -25,7 +25,7 @@ class BrandFactory extends Factory
             'name' => $name,
             'slug' => Str::slug($name),
             'description' => $this->faker->paragraph(2),
-            'logo' => 'https://picsum.photos/seed/' . Str::random(10) . '/400/400',
+            'logo' => null
         ];
     }
 }
