@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Filament\Resources\Products\Tables;
 
 use Filament\Actions\DeleteAction;
@@ -19,32 +20,23 @@ class ProductsTable
         return $table
             ->columns([
 
-                // ImageColumn::make('images')
-                //     ->label('Imágenes')
-                //     ->imageWidth(200)
-                //     ->imageHeight(200)
-                //     ->getStateUsing(function ($record) {
-                //         if (!is_null($record->images) && is_array($record->images) && count($record->images) > 0) {
-                //             $firstImage = $record->images[0];
-
-                //             if (!empty($firstImage) && Storage::disk('public')->exists($firstImage)) {
-                //                 return Storage::disk('public')->url($firstImage);
-                //             }
-                //         }
-                //         return asset('images/generico.jpeg');
-                //     }),
                 ImageColumn::make('images')
                     ->label('Imágenes')
                     ->getStateUsing(fn($record) => $record->images[0] ?? null) // Muestra la primera imagen o null
                     ->defaultImageUrl(asset('images/generico.jpeg'))           // Usa esta imagen si el valor es null
-                    ->imageWidth(200)
-                    ->imageHeight(200)
+                    ->imageWidth(150)
+                    ->imageHeight(150)
                     ->disk('public'),
                 TextColumn::make('name')
                     ->label('Nombre')
                     ->searchable()
                     ->verticallyAlignStart()
                     ->sortable(),
+                TextColumn::make('brand.name')
+                    ->label('Marca')
+                    ->sortable()
+                    ->searchable()
+                    ->verticallyAlignStart(),
                 TextColumn::make('categories.name')
                     ->label('Categorías')
                     ->listWithLineBreaks()
