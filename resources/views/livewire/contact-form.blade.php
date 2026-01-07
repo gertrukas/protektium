@@ -191,11 +191,11 @@
                     <p class="text-gray-600">Escríbenos a</p>
                     <p
                         class="text-xs text-azul font-semibold hover:text-orange-500 transition-colors duration-300 hover:underline break-words block">
-                        {{ env('MAIL_CONTACT_ADDRESS', 'contacto@romcypets.com') }}</p>
+                        {{ env('MAIL_CONTACT_ADDRESS', 'info@protektium.com') }}</p>
 
                     <div class="pt-4 text-center">
                         <p class="text-sm text-gray-600 mb-2">¿Prefieres usar Gmail?</p>
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contacto@romcypets.com&su=Consulta desde el sitio web&body=Hola, me gustaría obtener más información sobre..."
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@protektium.com&su=Consulta desde el sitio web&body=Hola, me gustaría obtener más información sobre..."
                             target="_blank" rel="noopener noreferrer"
                             class="inline-flex items-center text-azul hover:text-orange-500 font-semibold transition-colors duration-300">
                             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

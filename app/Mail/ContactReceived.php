@@ -37,7 +37,7 @@ class ContactReceived extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Hemos recibido tu mensaje - Romcy Pets',
+            subject: 'Hemos recibido tu mensaje - Protektium',
         );
     }
 

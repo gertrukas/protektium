@@ -27,18 +27,12 @@ Route::get('/comunicados', BlogIndex::class)->name('blogs.index');
 Route::get('/aviso-de-privacidad', function () {
     $title = 'Aviso de privacidad';
     $canonical = '/aviso-de-privacidad';
-    $_descripcion = 'En Romcy pets reespetamos las regulaciones para la protección de datos';
+    $_descripcion = 'En Protektium reespetamos las regulaciones para la protección de datos';
 
     return view('aviso-de-privacidad', compact('title', 'canonical', '_descripcion'));
 });
 
-Route::get('/federacion-canofila-mexicana', function () {
-    $title = 'Federación Canofila Mexicana';
-    $canonical = '/federacion-canofila-mexicana';
-    $_descripcion = 'Nuestro criadero está regulado por la Federación Canófila Mexicana (FCM), operando bajo lineamientos legales y fiscales en regla.';
 
-    return view('federacion-canofila-mexicana', compact('title', 'canonical', '_descripcion'));
-});
 
 Route::get('/razas', function () {
     $title = 'Razas pomeranian, shih tzu y yorkies';
@@ -51,15 +45,15 @@ Route::get('/razas', function () {
 Route::get('/quienes-somos', function () {
     $title = 'quienes somos';
     $canonical = '/quienes-somos';
-    $_descripcion = 'Somos un criadero familiar que nació del amor, la dedicación y el respeto hacia los perros.';
+    $_descripcion = 'En Protektium ofrecemos soluciones en calzado industrial y accesorios de seguridad, respaldadas por asesoría técnica y enfoque ergonómico.';
 
     return view('somos', compact('title', 'canonical', '_descripcion'));
 });
 
 Route::get('/servicios', function () {
-    $title = 'Romcypets servicios';
+    $title = 'Protektium servicios';
     $canonical = '/servicios';
-    $_descripcion = 'En Romcy Pets creemos que cada cachorro merece un cuidado completo, amoroso y adaptado a sus necesidades.';
+    $_descripcion = 'En Protektium creemos que cada cachorro merece un cuidado completo, amoroso y adaptado a sus necesidades.';
 
     return view('servicios', compact('title', 'canonical', '_descripcion'));
 });

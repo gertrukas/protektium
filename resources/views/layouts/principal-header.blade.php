@@ -1,26 +1,24 @@
-          
-          <div class="bg-black grid grid-cols-2 py-2 m-0">
-                                <div class="pl-4">
+
+       <div class="container max-w-full bg-black ">
+            <div class="wrapper grid grid-cols-2 py-2  mx-auto">
+                                <div class="pl-4 sm:pl-0">
                                         <p class="-copy mt-0">
-                                                <span class="inline-flex items-center space-x-2 whitespace-nowrap">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-</svg>
-                                                        <span>442 104 9006</span>
+                                                <span class="inline-flex items-center space-x-2 whitespace-nowrap mr-4">
+                                                    <i class="fa-solid fa-phone"></i>   
+                                                    <span>442 104 9006</span>
                                                 </span>
-                                                <span class="ml-4 inline-flex items-center space-x-2 whitespace-nowrap">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-</svg>
+                                                <span class=" inline-flex items-center space-x-2 whitespace-nowrap">
+                                                        <i class="fa-regular fa-envelope"></i>
                                                         <span>info@protektium.com</span>
                                                 </span>
                                         </p>
                                 </div>
-                <div class="pr-4 text-right">
-                    <p class="-copy mt-0">Equipos de protección industrial de calidad</p>
-                </div>
+                                <div class="pr-4 text-right">
+                                    <p class="-copy mt-0">Equipos de protección industrial de calidad</p>
+                                </div>
             </div>
-        
+        </div>
+
         <header class="container">
             
             <nav class="">
@@ -69,13 +67,8 @@
             <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
 
             <div>
-                <a href="https://wa.me/524424911549?text='hola%20RomcyPets"  target="_blank"
-                class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition">
-                    <!-- WhatsApp Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M20.52 3.48A11.78 11.78 0 0 0 12.03 0C5.41 0 .06 5.22.06 11.73c0 2.07.54 4.1 1.59 5.9L0 24l6.5-1.7a12.02 12.02 0 0 0 5.53 1.35h.01c6.62 0 12.03-5.22 12.03-11.73 0-3.13-1.23-6.07-3.55-8.37zM12.03 21.3c-1.7 0-3.36-.45-4.82-1.3l-.35-.2-3.86 1.03 1.03-3.74-.23-.38a9.66 9.66 0 0 1-1.48-5.16c0-5.33 4.36-9.67 9.71-9.67 2.6 0 5.03 1 6.87 2.8a9.52 9.52 0 0 1 2.83 6.87c0 5.33-4.36 9.67-9.7 9.67zm5.24-7.25c-.28-.14-1.65-.82-1.91-.91-.26-.1-.45-.14-.64.14-.19.28-.73.91-.9 1.1-.17.19-.33.21-.6.07-.28-.14-1.18-.44-2.25-1.41-.83-.74-1.39-1.64-1.55-1.91-.16-.28-.02-.43.12-.57.12-.12.28-.33.4-.49.14-.16.19-.28.28-.47.09-.19.05-.35-.02-.49-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.47-.64-.47h-.55c-.19 0-.49.07-.75.35-.26.28-1 1-1 2.42 0 1.42 1.02 2.79 1.16 2.98.14.19 2 3.16 4.85 4.43.68.29 1.21.46 1.63.59.68.22 1.3.19 1.79.12.55-.08 1.65-.67 1.88-1.33.23-.66.23-1.23.16-1.33-.07-.1-.26-.16-.54-.3z"/>
-                    </svg>
-                </a>
+                <a href="https://wa.me/524421370329?text='hola%20Protektium"  target="_blank"
+                class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
 
             </div>
 

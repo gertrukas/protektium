@@ -22,7 +22,8 @@
 
     h2{
         font-size:1.5rem;
-        @apply text-base10 
+    
+        @apply text-base10 mb-0
     }
 
     .-titulo{
@@ -44,16 +45,23 @@
 
     .-lista{
         margin-left:4rem;
-        list-style-type: circle;
-        list-style-position: outside;
-        
+        list-style-type: disc;
+        list-style-position: outside; 
+    }
+
+    .-lista li{
+        margin-top:1.5rem;
+    }
+
+      .-lista li p{
+        margin-top:0rem;
     }
 
 
 
 
     .wrapper {
-        @apply w-[90%] mx-auto overflow-hidden max-w-screen-xl;
+        @apply w-[90%] mx-auto overflow-hidden ;
     }
 
     .button {
@@ -73,7 +81,7 @@
     }
 
     .-centrado{
-        @apply  lg:w-3/5  md:w-3/4  sm:w-full
+        @apply  lg:w-4/5  md:w-3/4  sm:w-full
     }
 
 

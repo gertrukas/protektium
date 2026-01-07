@@ -3,7 +3,7 @@
         <div class="flex flex-wrap items-center justify-between">
 
             <a href="/" class="flex justify-center items-center p-4">
-                <img src='{{ asset('images/romcypets.webp') }}' width="300" height="auto">
+                <img src='{{ asset('images/protektium.webp') }}' width="300" height="auto">
             </a>
 
             <button data-collapse-toggle="mobile-menu" type="button"
@@ -44,7 +44,7 @@
     <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
 
     <div>
-        <a href="https://wa.me/524424911549?text='hola%20RomcyPets" target="_blank"
+        <a href="https://wa.me/524421370329?text='hola%20Protektium" target="_blank"
             class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition">
             <!-- WhatsApp Icon -->
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

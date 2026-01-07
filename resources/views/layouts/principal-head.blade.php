@@ -23,7 +23,7 @@
     
    
 
-    <link rel="icon" href="{{ asset('images/romcypets.ico') }}" sizes="any">
+    <link rel="icon" href="{{ asset('images/protektium.ico') }}" sizes="any">
     <!-- Fonts -->
     
 

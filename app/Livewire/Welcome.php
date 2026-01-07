@@ -23,9 +23,9 @@ class Welcome extends Component
         return view('livewire.welcome', [
             'blogs' => $blogs,
         ])->layout('layouts.principal',[
-            'title' => 'RomcyPets criadero responsable',
+            'title' => 'Protektium - Soluciones en calzado industrial y equipo de seguridad',
             'canonical' => '',
-            '_descripcion' => 'Criadero familiar que nació del amor, dedicación y respeto hacia los perros.',
+            '_descripcion' => 'En Protektium ofrecemos soluciones en calzado industrial y accesorios de seguridad, respaldadas por asesoría técnica y enfoque ergonómico.',
         ]);
     }
 }

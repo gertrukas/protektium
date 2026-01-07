@@ -5,7 +5,8 @@
 </head>
 
 <body class="font-principal bright-red flex flex-col min-h-screen bg-base60">
-    @include('layouts.app-header')
+    
+    @include('layouts.principal-header')
 
     @yield('content')
 
