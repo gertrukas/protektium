@@ -14,7 +14,7 @@
 
 
     <div class="">
-        {{-- $slot --}}
+        @livewire('product-card-list', ['title' => 'PRODUCTOS', 'destacadoValue' => 0, 'limit' => 3])
     </div>
 
     @include('layouts.principal-footer')
