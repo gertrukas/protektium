@@ -14,7 +14,7 @@
 
 
     <div class="">
-        @livewire('product-card-list', ['title' => 'PRODUCTOS', 'destacadoValue' => 0, 'limit' => 3])
+        @livewire('product-card-list', ['title' => 'PRODUCTOS', 'destacadoValue' => 0, 'limit' => 6])
     </div>
 
     @include('layouts.principal-footer')
