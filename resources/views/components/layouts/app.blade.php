@@ -87,7 +87,7 @@
 <body class="font-principal bright-red flex flex-col min-h-screen bg-base60">
 
 
-    @include('layouts.principal-header')
+   
 
     <div class="">
         {{ $slot }}

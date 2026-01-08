@@ -17,6 +17,6 @@ class ProductSeeder extends Seeder
     public function run(): void
     {
         $this->command->warn(PHP_EOL . __('Creando Productos'));
-        Product::factory(15)->create();
+        Product::factory(10)->create();
     }
 }

@@ -5,7 +5,7 @@
                                         <p class="-copy mt-0">
                                                 <span class="inline-flex items-center space-x-2 whitespace-nowrap mr-4">
                                                     <i class="fa-solid fa-phone"></i>   
-                                                    <span>442 104 9006</span>
+                                                    <span>52 442 137 0329</span>
                                                 </span>
                                                 <span class=" inline-flex items-center space-x-2 whitespace-nowrap">
                                                         <i class="fa-regular fa-envelope"></i>

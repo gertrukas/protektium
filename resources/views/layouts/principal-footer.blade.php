@@ -58,7 +58,7 @@
 				 <i class="fa-solid fa-phone"></i>   
 			</div>
 			<div class="text-gray-400 text-sm ml-2">
-				442 104 9006	
+				52 442 137 0329
 			</div>
 		</div>
 
