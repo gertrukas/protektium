@@ -145,5 +145,9 @@
     @apply text-orange-500;
 }
 
+.-tarjeta-pdcto{
+    @apply bg-white rounded-xl shadow-xl overflow-hidden h-full flex flex-col transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl;
+}
+
 
 

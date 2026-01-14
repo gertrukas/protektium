@@ -12,8 +12,8 @@
                 </button>
 
 
-                <h1 class="text-white leading-none"><b>Tu seguridad es</b></h1>
-                <h1 class="text-base30 leading-tight"><b>nuestra prioridad</b></h1>
+                <h1 class="text-white leading-none text-6xl"><b>Tu seguridad es</b></h1>
+                <h1 class="text-base30 leading-tight text-6xl"><b>nuestra prioridad</b></h1>
 
                 <p class="text-white">En protektium ofrecemos equipos de protección personal de la más alta calidad para
                     garantizar la seeguridad de tu equipo de trabajo en cualquier industria</p>

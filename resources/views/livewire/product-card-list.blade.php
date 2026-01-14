@@ -12,9 +12,10 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
 
         @forelse ($items as $item)
-            
 
-                <div class="bg-white rounded-xl shadow-xl overflow-hidden h-full flex flex-col">
+            <!--- Card de Producto --->
+
+                <div class="-tarjeta-pdcto">
 
                     <div class="h-48 p-2">
                         @php
@@ -33,9 +34,9 @@
                             </a>
                         @else
                             <a href="{{ route('product.show', ['slug' => $item->slug]) }}" class="h-full">
-                            <img src="{{ asset('images/generico.jpeg') }}" alt="Imagen genérica"
+                                <img src="{{ asset('images/generico.jpeg') }}" alt="Imagen genérica"
                                 class="w-full h-full object-cover rounded-xl">
-                                </a>
+                            </a>
                         @endif
                     </div>
 

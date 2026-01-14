@@ -83,8 +83,8 @@
 
         @forelse ($products as $product)
             
-                
-                <div class="bg-white rounded-xl shadow-xl overflow-hidden h-full flex flex-col">
+                <!--- Card de Producto --->
+                <div class="-tarjeta-pdcto">
                     <div class="h-48 p-2">
                         @php
                             $imageExists = false;
