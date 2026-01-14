@@ -60,7 +60,7 @@
     <title>{{ config('app.name', 'XsBeta') }}</title>
       <link rel="canonical" href="https://protektium.com/contacto" />
 
-    <link rel="icon" href="{{ asset('images/favicon-32x32.png') }}" sizes="any">
+    <link rel="icon" href="{{ asset('images/protektium.ico') }}" sizes="any">
     
    
     
