@@ -35,7 +35,7 @@
             <p>En Protektium ofrecemos soluciones en calzado industrial y accesorios de seguridad, respaldadas por asesoría técnica y enfoque ergonómico, para proteger al trabajador, prevenir riesgos y cumplir con los estándares de seguridad industrial en cada entorno laboral.</p>       
         </div>
         <div>
-             <img src='{{ asset('images/generico.jpeg') }}' class="w-full pt-2" alt="Protektium, quienes somos">
+             <img src='{{ asset('images/quienes-somos.webp') }}' class="w-full pt-2" alt="Protektium, quienes somos">
         </div>
     </div>
 
@@ -88,7 +88,7 @@
 
      <div class="wrapper -centrado grid grid-cols-1 md:grid-cols-2 gap-2 pt-4">
          <div>
-             <img src='{{ asset('images/generico.jpeg') }}' class="w-full pt-2" alt="Protektium misión">
+             <img src='{{ asset('images/mision.webp') }}' class="w-full pt-2" alt="Protektium misión">
         </div>
         <div class="">
             <h2  class="">Misión </h2>
@@ -104,7 +104,7 @@
             <p>Ser un aliado estratégico para las empresas, impulsando una cultura de prevención, cuidado del cuerpo y seguridad laboral, donde la protección adecuada se traduzca en bienestar, confianza y mayor rendimiento.</p>
         </div>
         <div>
-             <img src='{{ asset('images/generico.jpeg') }}' class="w-full pt-2" alt="Protektium Visión">
+             <img src='{{ asset('images/vision.webp') }}' class="w-full pt-2" alt="Protektium Visión">
         </div>
        
     </div>

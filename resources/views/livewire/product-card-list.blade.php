@@ -12,7 +12,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
 
         @forelse ($items as $item)
-            <a href="{{ route('product.show', ['slug' => $item->slug]) }}" class="h-full">
+            
 
                 <div class="bg-white rounded-xl shadow-xl overflow-hidden h-full flex flex-col">
 
@@ -27,11 +27,15 @@
                         @endphp
 
                         @if ($imageExists)
-                            <img src="{{ asset('storage/' . $item->images[0]) }}" alt="{{ $item->name }}"
+                            <a href="{{ route('product.show', ['slug' => $item->slug]) }}" class="h-full">
+                                <img src="{{ asset('storage/' . $item->images[0]) }}" alt="{{ $item->name }}"
                                 class="w-full h-full object-cover rounded-xl">
+                            </a>
                         @else
+                            <a href="{{ route('product.show', ['slug' => $item->slug]) }}" class="h-full">
                             <img src="{{ asset('images/generico.jpeg') }}" alt="Imagen genérica"
                                 class="w-full h-full object-cover rounded-xl">
+                                </a>
                         @endif
                     </div>
 
@@ -46,10 +50,12 @@
                     </div>
 
                     <div class="text-end">
+                       <a href="{{ route('product.show', ['slug' => $item->slug]) }}" class="h-full">
                         <button class="-ver-mas">Ver mas</button>
+                        </a>
                     </div>
                 </div>
-            </a>
+           
 
         @empty
             <h1 class="col-span-full text-center text-2xl font-bold text-gray-700">

@@ -82,7 +82,7 @@
     <main class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
         @forelse ($products as $product)
-            <a href="{{ route('product.show', ['slug' => $product->slug]) }}">
+            
                 
                 <div class="bg-white rounded-xl shadow-xl overflow-hidden h-full flex flex-col">
                     <div class="h-48 p-2">
@@ -96,11 +96,15 @@
                         @endphp
 
                         @if ($imageExists)
-                            <img src="{{ asset('storage/' . $product->images[0]) }}" alt="{{ $product->name }}"
+                            <a href="{{ route('product.show', ['slug' => $product->slug]) }}">
+                                <img src="{{ asset('storage/' . $product->images[0]) }}" alt="{{ $product->name }}"
                                 class="w-full h-full object-cover rounded-xl">
+                            </a>
                         @else
+                            <a href="{{ route('product.show', ['slug' => $product->slug]) }}">
                             <img src="{{ asset('images/generico.jpeg') }}" alt="Imagen genérica"
                                 class="w-full h-full object-cover rounded-xl">
+                            </a>
                         @endif
                     </div>
                     <div class="p-4 flex-col h-full">
@@ -113,10 +117,12 @@
                         </div>
                     </div>
                     <div class="text-end">
+                        <a href="{{ route('product.show', ['slug' => $product->slug]) }}">
                             <button class="-ver-mas">Ver mas</button>
+                        </a>
                     </div>
                 </div>
-            </a>
+            
 
         @empty
             <h1 class="col-span-full text-center text-2xl font-bold text-gray-700">NO HAY PRODUCTOS DISPONIBLES.</h1>

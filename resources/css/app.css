@@ -135,11 +135,11 @@
 }
 
 .-btn-negro{
-    @apply bg-black border border-stone-light-gray  text-white font-bold py-2 px-4 rounded mt-4 hover:bg-base30 hover:text-black
+    @apply bg-black border border-stone-light-gray  text-white font-bold py-1 px-4 rounded mt-4 hover:bg-base30 hover:text-black
 }
 
 .-ver-mas{
-    @apply text-2xl bg-base30 hover:bg-base10 text-white py-2 px-4 m-4 rounded shadow-base10/50;
+    @apply text-2xl bg-base30 hover:bg-base10 text-white pb-1 px-4 m-4 rounded ;
 }
 .-titulo{
     @apply text-orange-500;
