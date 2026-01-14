@@ -1,12 +1,12 @@
-<div class="container mx-auto p-4">
+<div class="container mx-auto p-4 bg-gray-100">
 
     <header class="flex justify-between items-center mb-6">
         <div class="text-3xl font-bold text-center">
             <h1>Listado de Productos</h1>
         </div>
         <div>
-            <input wire:model.live="searchQuery" type="text" placeholder="Buscar productos..."
-                class="border p-2 rounded-lg">
+            <input wire:model.live="searchQuery" type="text" placeholder="Buscar productos..." class="border p-2 rounded-lg">
+            <i class="fa-solid fa-magnifying-glass"></i>
         </div>
     </header>
     <nav class="flex justify-center items-center gap-4 mb-8">
@@ -58,7 +58,7 @@
     <hr class="mb-8">
     <div class="flex justify-between items-center mb-4">
         {{-- Condición para mostrar el select solo si el total de productos es mayor a 12 --}}
-        @if ($products->total() > 12)
+       
             {{-- Contenedor del select --}}
             <div class="flex items-center space-x-2">
                 <label for="perPage" class="text-sm text-gray-700 font-medium">Mostrar:</label>
@@ -68,21 +68,24 @@
                     <option value="24">24</option>
                     <option value="48">48</option>
                     <option value="96">96</option>
+                    <option value="todos">Todos</option>
                 </select>
             </div>
-        @endif
+        
 
         {{-- Enlaces de paginación --}}
         <div>
             {{ $products->links() }}
         </div>
     </div>
+   
     <main class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
         @forelse ($products as $product)
             <a href="{{ route('product.show', ['slug' => $product->slug]) }}">
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <div class="h-48 overflow-hidden flex items-center justify-center">
+                
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden h-full flex flex-col">
+                    <div class="h-48 p-2">
                         @php
                             $imageExists = false;
                             $imagePath = '';
@@ -94,20 +97,23 @@
 
                         @if ($imageExists)
                             <img src="{{ asset('storage/' . $product->images[0]) }}" alt="{{ $product->name }}"
-                                class="w-full h-full object-cover">
+                                class="w-full h-full object-cover rounded-xl">
                         @else
                             <img src="{{ asset('images/generico.jpeg') }}" alt="Imagen genérica"
-                                class="w-full h-full object-cover">
+                                class="w-full h-full object-cover rounded-xl">
                         @endif
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-xl mb-2">{{ $product->name }}</h3>
-                        <p class="text-blue-600 font-semibold text-lg">
-                            ${{ number_format($product->price, 2, '.', ',') }}
-                        </p>
-                        <p class="text-blue-600 font-semibold text-lg">
-                            ID: {{ $product->id }} Total de imagenes: {{ count($product->images) }}
-                        </p>
+                    <div class="p-4 flex-col h-full">
+                        <h3 class="font-bold text-2xl mb-2">{{ $product->name }}</h3>
+                        
+                         <div class="max-h-[96px] overflow-hidden line-clamp-3">
+                             <div class="text-sm text-gray-600">
+                                {!! $item->description ?? 'descripción del producto' !!}
+                             </div>
+                        </div>
+                    </div>
+                    <div class="text-end">
+                            <button class="-ver-mas">Ver mas</button>
                     </div>
                 </div>
             </a>

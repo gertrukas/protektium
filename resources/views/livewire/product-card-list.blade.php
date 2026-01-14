@@ -1,12 +1,12 @@
-<div class="container mx-auto p-4">
+<div class="container mx-auto p-4 bg-gray-100">
 
     <header class="flex justify-between items-center mb-0">
-        <div class="text-6xl font-bold text-center">
-            <h1 class="-titulo">{{ $title }}</h1>
+        <div class="text-6xl font-bold text-center pb-2">
+            <h1 class="">{{ $title }}</h1>
         </div>
     </header>
 
-    <hr class="mb-8">
+   
 
     {{-- Contenedor del Grid de Tarjetas --}}
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
@@ -14,9 +14,9 @@
         @forelse ($items as $item)
             <a href="{{ route('product.show', ['slug' => $item->slug]) }}" class="h-full">
 
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden h-full flex flex-col">
 
-                    <div class="h-48 overflow-hidden flex items-center justify-center">
+                    <div class="h-48 p-2">
                         @php
                             $imageExists = false;
                             $imagePath = '';
@@ -28,22 +28,23 @@
 
                         @if ($imageExists)
                             <img src="{{ asset('storage/' . $item->images[0]) }}" alt="{{ $item->name }}"
-                                class="w-full h-full object-cover">
+                                class="w-full h-full object-cover rounded-xl">
                         @else
                             <img src="{{ asset('images/generico.jpeg') }}" alt="Imagen genérica"
-                                class="w-full h-full object-cover">
+                                class="w-full h-full object-cover rounded-xl">
                         @endif
                     </div>
 
-                    <div class="p-4 flex-col">
-                        <h3 class="font-bold text-xl mb-2">{{ $item->name }}</h3>
+                    <div class="p-4 flex-col h-full">
+                        <h3 class="font-bold text-2xl mb-2">{{ $item->name }}</h3>
 
                         <div class="max-h-[96px] overflow-hidden line-clamp-3">
-                             <div class="text-gray-700 text-base">
+                             <div class="text-sm text-gray-600">
                                 {!! $item->description !!}
                              </div>
                         </div>
                     </div>
+
                     <div class="text-end">
                         <button class="-ver-mas">Ver mas</button>
                     </div>
@@ -60,9 +61,8 @@
 
      <div class="flex justify-end mt-4 pb-8">
         {{-- Usamos la ruta 'products.index' y le pasamos el valor de $destacadoValue --}}
-        <a href="{{ route('products.index', ['destacado' => $destacadoValue]) }}"
-            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded p-10
-               transition-colors duration-300 shadow-lg shadow-blue-600/50">
+        <a href="/productos"
+            class="-btn-negro">
             VER TODOS
         </a>
     </div>
