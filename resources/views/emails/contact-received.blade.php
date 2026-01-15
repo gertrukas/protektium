@@ -78,7 +78,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1 style="margin: 0;">Romcy Pets</h1>
+            <h1 style="margin: 0;">protektium.ocom</h1>
         </div>
 
         <p>Estimado/a <strong>{{ $name }}</strong>,</p>
@@ -111,7 +111,7 @@
 
         <div class="signature">
             <p><strong>Atentamente:</strong></p>
-            <p style="font-size: 18px; color: #1e40af; margin: 10px 0;"><strong>Romcy Pets</strong></p>
+            <p style="font-size: 18px; color: #1e40af; margin: 10px 0;"><strong>Protektium</strong></p>
         </div>
 
         <div class="footer">

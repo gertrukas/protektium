@@ -25,7 +25,7 @@
                 <div class="flex flex-wrap items-center justify-between">
 
                     <a href="/" class="flex justify-center items-center p-4">
-                        <img src='{{ asset('images/protektium.webp') }}' width="300" height="auto" alt="romcy pets">
+                        <img src='{{ asset('images/protektium.webp') }}' width="300" height="auto" alt="Protektium">
                     </a>
 
                     <button data-collapse-toggle="mobile-menu" type="button"

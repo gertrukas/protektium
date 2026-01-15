@@ -34,13 +34,6 @@ Route::get('/aviso-de-privacidad', function () {
 
 
 
-Route::get('/razas', function () {
-    $title = 'Razas pomeranian, shih tzu y yorkies';
-    $canonical = '/razas';
-    $_descripcion = 'Las razas que criamos son: Pomerania, Shih Tzu y Yorkie';
-
-    return view('razas', compact('title', 'canonical', '_descripcion'));
-});
 
 Route::get('/quienes-somos', function () {
     $title = 'quienes somos';
@@ -50,13 +43,6 @@ Route::get('/quienes-somos', function () {
     return view('somos', compact('title', 'canonical', '_descripcion'));
 });
 
-Route::get('/servicios', function () {
-    $title = 'Protektium servicios';
-    $canonical = '/servicios';
-    $_descripcion = 'En Protektium creemos que cada cachorro merece un cuidado completo, amoroso y adaptado a sus necesidades.';
-
-    return view('servicios', compact('title', 'canonical', '_descripcion'));
-});
 
 Route::get('/contacto', ContactForm::class)->name('contacto');
 
