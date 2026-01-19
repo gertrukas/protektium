@@ -12,7 +12,7 @@ class Welcome extends Component
      *
      * @return \Illuminate\Contracts\View\View
      */
-    
+
     public function render()
     {
         $blogs = Blog::where('is_published', 1)
@@ -22,7 +22,7 @@ class Welcome extends Component
 
         return view('livewire.welcome', [
             'blogs' => $blogs,
-        ])->layout('layouts.principal',[
+        ])->layout('layouts.principal', [
             'title' => 'Protektium - Soluciones en calzado industrial y equipo de seguridad',
             'canonical' => '',
             '_descripcion' => 'En Protektium ofrecemos soluciones en calzado industrial y accesorios de seguridad, respaldadas por asesoría técnica y enfoque ergonómico.',
