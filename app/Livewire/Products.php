@@ -13,78 +13,88 @@ class Products extends Component
     use WithPagination;
 
     public $categories;
-    public $brands; // Nueva propiedad
-    public $selectedCategory = 'all';
-    public $selectedBrand = 'all'; // Nueva propiedad
+    public $brands;
+
+    // Propiedades como arreglos para selección múltiple
+    public $selectedCategories = [];
+    public $selectedBrands = [];
     public $searchQuery = '';
     public $perPage = 12;
-    public $showMoreCategories = false; // Propiedad para controlar la visibilidad
 
     public function mount()
     {
-        $this->categories = ProductCategory::with('products')->get();
+        $this->categories = ProductCategory::orderBy('name')->get();
         $this->brands = Brand::orderBy('name')->get();
     }
 
+    /**
+     * Aplica Filtros y renderiza
+     */
+
     public function render()
     {
-        $productsQuery = Product::query();
 
-        if ($this->selectedCategory !== 'all') {
-            $category = ProductCategory::where('name', $this->selectedCategory)->first();
-            if ($category) {
-                $productsQuery->whereHas('categories', function ($query) use ($category) {
-                    $query->where('product_category_id', $category->id);
-                });
-            }
+        $productsQuery = Product::with(['categories', 'brand']);
+
+        // 1. Filtro por Categorías
+        if (!empty($this->selectedCategories)) {
+            $categoryIds = array_map('intval', (array)$this->selectedCategories);
+            $productsQuery->whereHas('categories', function ($query) use ($categoryIds) {
+                $query->whereIn('product_category_id', $categoryIds);
+            });
         }
 
-        if ($this->selectedBrand !== 'all') {
-            $productsQuery->where('brand_id', $this->selectedBrand);
+        // 2. Filtro por Marcas
+        if (!empty($this->selectedBrands)) {
+
+            $brandIds = array_map('intval', (array)$this->selectedBrands);
+            $productsQuery->whereIn('brand_id', $brandIds);
         }
 
-        // Filtro por Búsqueda
+        // 3. Filtro por Búsqueda
         if ($this->searchQuery) {
             $productsQuery->where('name', 'like', '%' . $this->searchQuery . '%');
         }
 
-        $products = $productsQuery->paginate($this->perPage);
+        // 4. Manejo de Paginación
+        $perPageLimit = $this->perPage === 'todos' ? Product::count() : (int)$this->perPage;
 
         return view('livewire.products', [
-            'products' => $products,
+            'products' => $productsQuery->paginate($perPageLimit),
         ])->layout('layouts.principal-productos');
     }
 
-    // Nuevo método para alternar la visibilidad del menú
-    public function toggleMoreCategories()
-    {
-        $this->showMoreCategories = !$this->showMoreCategories;
-    }
 
-    // Filtrar por Marca
-    public function filterByBrand($brandId)
+    public function updatedSelectedCategories()
     {
-        $this->selectedBrand = $brandId;
         $this->resetPage();
     }
 
-    public function filterByCategory($categoryId)
+    public function updatedSelectedBrands()
     {
-        if ($categoryId === 'all') {
-            $this->selectedCategory = 'all';
-        } else {
-            $category = ProductCategory::find($categoryId);
-            if ($category) {
-                $this->selectedCategory = $category->name;
-            }
-        }
         $this->resetPage();
-        $this->showMoreCategories = false; // Cierra el menú al seleccionar una categoría
     }
 
     public function updatedSearchQuery()
     {
-        $this->selectedCategory = 'all';
+        $this->resetPage();
+    }
+
+    // Métodos de limpieza independientes
+    public function clearCategoryFilters()
+    {
+        $this->reset('selectedCategories');
+        $this->resetPage();
+    }
+
+    public function clearBrandFilters()
+    {
+        $this->reset('selectedBrands');
+        $this->resetPage();
+    }
+
+    public function updatedPerPage()
+    {
         $this->resetPage();
     }
 }
