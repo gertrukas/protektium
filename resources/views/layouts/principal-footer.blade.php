@@ -16,7 +16,7 @@
 			<h2 class="text-white pb-4">Descubre</h2>
 				<ul class="text-sm ">
 					<li><a href="/quienes-somos" class="hover:text-base30 transition-colors duration-300 text-white">Somos</a></li>
-					<li><a href="/productos" class="hover:text-base30 transition-colors duration-300 text-white">productos</a></li>
+					<li><a href="/productos" class="hover:text-base30 transition-colors duration-300 text-white">Productos</a></li>
 					<li><a href="/contacto" class="hover:text-base30 transition-colors duration-300 text-white">Contacto</a></li>
 					
 				</ul>

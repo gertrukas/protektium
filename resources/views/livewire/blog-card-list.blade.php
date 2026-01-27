@@ -1,8 +1,8 @@
 <div class="container mx-auto p-4">
 
     <header class="flex justify-between items-center mb-0">
-        <div class="text-6xl font-bold text-center">
-            <h1 class="-titulo">{{ $title }}</h1>
+        <div class="text-6xl font-bold text-center pb-2">
+            <h1 class="">{{ $title }}</h1>
         </div>
     </header>
 
@@ -14,7 +14,7 @@
         @forelse ($items as $item)
             <a href="{{ route('blog.show', ['slug' => $item->slug]) }}" class="h-full">
 
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
+                <div class="-tarjeta-pdcto">
 
                     <div class="h-48 overflow-hidden flex items-center justify-center">
                         @php
@@ -60,8 +60,7 @@
 
     <div class="flex justify-end mt-4 pb-8">
         <a href="{{ route('blogs.index') }}"
-            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded p-10
-               transition-colors duration-300 shadow-lg shadow-blue-600/50">
+            class="-btn-negro">
             VER TODOS
         </a>
     </div>

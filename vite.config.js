@@ -8,12 +8,12 @@ export default defineConfig({
             refresh: true,
         }),
     ],
-server: {
+    server: {
         host: '0.0.0.0',
         port: 5173,
         strictPort: true,
         hmr: {
-            host: '192.168.1.125', // 👈 IP DE TU MAC
+            host: '192.168.1.114',
         },
     },
 });

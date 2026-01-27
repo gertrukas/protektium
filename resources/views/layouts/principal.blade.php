@@ -12,10 +12,12 @@
 
     @include('components.home-hero-section')
 
-    {{ $slot }}
+  
     <div class="">
         @livewire('product-card-list', ['title' => 'PRODUCTOS', 'destacadoValue' => 0, 'limit' => env('LIMIT_SHOW_PRODUCTS_INITIAL_PAGE_INITIAL_PAGE', 3)])
     </div>
+    {{ $slot }}
+
 
     @include('layouts.principal-footer')
 
