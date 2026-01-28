@@ -28,14 +28,14 @@
 
 
     
-    <div class="wrapper -centrado grid grid-cols-1 md:grid-cols-2 gap-2">
-        <div class="py-4 text-center col-span-2"><h1 class="text-base10">ofrecemos soluciones en seguridad industrial</h1></div>
-        <div class="col-span-1">
+    <div class="wrapper -centrado grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-2" id="quienes-somos">
+        <div class="py-4 text-center sm:col-span-2 md:col-span-2 lg:col-span-2"><h1 class="text-base10">ofrecemos soluciones en seguridad industrial</h1></div>
+        <div class="col-span-1 pl-2">
             <h2>quienes somos</h2>
             <p>En Protektium ofrecemos soluciones en calzado industrial y accesorios de seguridad, respaldadas por asesoría técnica y enfoque ergonómico, para proteger al trabajador, prevenir riesgos y cumplir con los estándares de seguridad industrial en cada entorno laboral.</p>       
         </div>
         <div>
-             <img src='{{ asset('images/quienes-somos.webp') }}' class="w-full pt-2" alt="Protektium, quienes somos">
+             <img src='{{ asset('images/quienes-somos.webp') }}' class="w-auto pt-2 m-auto pr-2" alt="Protektium, quienes somos">
         </div>
     </div>
 
@@ -88,9 +88,9 @@
 
      <div class="wrapper -centrado grid grid-cols-1 md:grid-cols-2 gap-2 pt-4">
          <div>
-             <img src='{{ asset('images/mision.webp') }}' class="w-full pt-2" alt="Protektium misión">
+             <img src='{{ asset('images/mision.webp') }}' class="m-auto pt-2 content-center" alt="Protektium misión">
         </div>
-        <div class="">
+        <div class="pl-2">
             <h2  class="">Misión </h2>
             <p>Proteger al trabajador de manera integral mediante soluciones en calzado industrial, accesorios y productos de seguridad, asegurando protección, confort y estabilidad, con el objetivo de promover jornadas laborales más seguras, saludables y equilibradas</p>            
         </div>
@@ -99,12 +99,12 @@
 
      <div class="wrapper -centrado grid grid-cols-1 md:grid-cols-2 gap-2 pt-4">
          
-        <div class="">
+        <div class="pl-2">
             <h2>Visión </h2>
             <p>Ser un aliado estratégico para las empresas, impulsando una cultura de prevención, cuidado del cuerpo y seguridad laboral, donde la protección adecuada se traduzca en bienestar, confianza y mayor rendimiento.</p>
         </div>
         <div>
-             <img src='{{ asset('images/vision.webp') }}' class="w-full pt-2" alt="Protektium Visión">
+             <img src='{{ asset('images/vision.webp') }}' class="m-auto pt-2 content-center" alt="Protektium Visión">
         </div>
        
     </div>

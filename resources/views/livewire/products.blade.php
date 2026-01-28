@@ -20,15 +20,21 @@
                     </button>
                 @endif
             </div>
-            <select wire:model.live="selectedCategories" multiple
-                class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm h-32">
+
+            <div
+                class="w-full border border-gray-300 rounded-lg shadow-sm bg-white p-3 h-32 overflow-y-auto custom-scrollbar">
                 @foreach ($categories as $category)
-                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    <div class="flex items-center mb-1 last:mb-0">
+                        <input type="checkbox" id="cat-{{ $category->id }}" value="{{ $category->id }}"
+                            wire:model.live="selectedCategories"
+                            class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                        <label for="cat-{{ $category->id }}"
+                            class="ml-2 text-sm text-gray-700 cursor-pointer select-none">
+                            {{ $category->name }}
+                        </label>
+                    </div>
                 @endforeach
-            </select>
-            <p class="text-[10px] text-gray-400 mt-1 italic leading-tight">
-                * Ctrl + Click para seleccionar varias categorías.
-            </p>
+            </div>
         </div>
 
         {{-- Selector de Marcas --}}
@@ -42,17 +48,22 @@
                     </button>
                 @endif
             </div>
-            <select wire:model.live="selectedBrands" multiple
-                class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-green-500 focus:border-green-500 text-sm h-32">
-                @foreach ($brands as $brand)
-                    <option value="{{ $brand->id }}">{{ $brand->name }}</option>
-                @endforeach
-            </select>
-            <p class="text-[10px] text-gray-400 mt-1 italic leading-tight">
-                * Ctrl + Click para seleccionar varias marcas.
-            </p>
-        </div>
 
+            <div
+                class="w-full border border-gray-300 rounded-lg shadow-sm bg-white p-3 h-32 overflow-y-auto custom-scrollbar">
+                @foreach ($brands as $brand)
+                    <div class="flex items-center mb-1 last:mb-0">
+                        <input type="checkbox" id="brand-{{ $brand->id }}" value="{{ $brand->id }}"
+                            wire:model.live="selectedBrands"
+                            class="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500">
+                        <label for="brand-{{ $brand->id }}"
+                            class="ml-2 text-sm text-gray-700 cursor-pointer select-none">
+                            {{ $brand->name }}
+                        </label>
+                    </div>
+                @endforeach
+            </div>
+        </div>
         {{-- Nombre del producto --}}
         <div class="relative">
             <label class="block text-sm font-bold text-gray-700 mb-2">Nombre del Producto</label>
@@ -161,11 +172,18 @@
         @if ($products->hasPages())
             {{-- Si hay más de una página, muestra los controles de paginación estándar --}}
             {{ $products->links() }}
+        @elseif($products->count() < $perpage)
+            {{-- Si hay productos pero no alcanzan para una segunda página --}}
+            <div class="flex justify-center items-center p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
+                <span class="text-gray-500 font-medium italic">
+                    {{ '< 1 >' }}
+                </span>
+            </div>
         @elseif($products->count() > 0)
             {{-- Si hay productos pero no alcanzan para una segunda página --}}
             <div class="flex justify-center items-center p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
                 <span class="text-gray-500 font-medium italic">
-                    <i class="fa-solid fa-circle-info mr-2"></i> No hay más registros
+                    {{ '< 1 >' }}
                 </span>
             </div>
         @else

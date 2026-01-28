@@ -19,6 +19,6 @@ class ShowBlog extends Component
 
     public function render()
     {
-        return view('livewire.show-blog');
+        return view('livewire.show-blog')->layout('layouts.principal');;
     }
 }
