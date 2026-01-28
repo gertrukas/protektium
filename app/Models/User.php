@@ -78,7 +78,7 @@ class User extends Authenticatable implements FilamentUser
             return false;
         }
 
-        // TODO:: Habilitar para usuario Administrador cuando ya estén todos los panes por rol
+        // TODO:: Habilitar para usuario Administrador cuando ya estén todos los panels por rol
         if ($panel->getId() === 'admin') {
 
             return $this->isAdmin();

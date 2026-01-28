@@ -38,6 +38,7 @@ class AppServiceProvider extends ServiceProvider
             $toggle
                 ->translateLabel()
                 ->inline(false)
+                ->default(true)
                 ->onIcon('heroicon-m-check-circle')
                 ->offIcon('heroicon-m-x-circle')
                 ->onColor('success')

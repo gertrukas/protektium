@@ -15,10 +15,4 @@ class CreateUser extends CreateRecord
     {
         return $this->getResource()::getUrl('index');
     }
-
-    protected function mutateFormDataBeforeCreate(array $data): array
-    {
-        $data['slug'] = Str::slug($data['title']);
-        return $data;
-    }
 }
