@@ -67,7 +67,7 @@
 				 <i class="fa-regular fa-envelope"></i>
 			</div>
 			<div class="text-gray-400 text-sm ml-2">
-				info@protektium.com
+				<a href="mailto:info@protektium.com" class="hover:text-base30 transition-colors duration-300">info@protektium.com</a>	
 				
 			</div>
 		</div>
