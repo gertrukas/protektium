@@ -1,0 +1,27 @@
+
+    /* 1. Seleccionamos el contenedor que tiene el texto y los botones */
+    .pagination-links nav div:last-child {
+        display: flex !important;
+        flex-direction: column !important;
+        /* Fuerza el texto abajo y botones arriba */
+        align-items: center !important;
+        /* Centra horizontalmente */
+        gap: 1.5rem !important;
+        /* Crea el espacio entre los dos elementos */
+    }
+
+    /* 2. Aseguramos que el texto descriptivo esté centrado */
+    .pagination-links nav p {
+        text-align: center !important;
+        color: #4b5563;
+        /* Un gris elegante (gray-600) */
+        font-size: 0.875rem;
+        /* text-sm */
+    }
+
+    /* 3. Quitamos el diseño original de Tailwind que los ponía en los extremos */
+    @media (min-width: 640px) {
+        .pagination-links nav div:last-child {
+            justify-content: center !important;
+        }
+    }

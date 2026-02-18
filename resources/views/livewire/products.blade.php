@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="{{ asset('css/paginacion_personalizada.css') }}">
 <div class="container mx-auto p-4 bg-gray-100">
 
     <header class="flex justify-between items-center mb-8 bg-white p-4 rounded-lg shadow-sm">
@@ -10,74 +11,29 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         <div class="flex flex-col">
             <div class="flex justify-between items-center mb-2">
-                <label class="block text-sm font-bold text-gray-700">Categorías</label>
-                @if (count($selectedCategories) > 0)
-                    <button wire:click="clearCategoryFilters"
-                        class="text-[10px] text-red-500 hover:underline font-bold uppercase">
-                        Limpiar ({{ count($selectedCategories) }})
-                    </button>
-                @endif
+                <label for="cat-select" class="block text-sm font-bold text-gray-700">Categorías</label>
             </div>
-        </div>
-    </div>
-
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-
-        
-        {{-- Selector de Categorías --}}
-        <div class="flex flex-col">
-            <div class="flex justify-between items-center mb-2">
-                <label class="block text-sm font-bold text-gray-700">Categorías</label>
-                @if (count($selectedCategories) > 0)
-                    <button wire:click="clearCategoryFilters"
-                        class="text-[10px] text-red-500 hover:underline font-bold uppercase">
-                        Limpiar ({{ count($selectedCategories) }})
-                    </button>
-                @endif
-            </div>
-
-            <div
-                class="w-full border border-gray-300 rounded-lg shadow-sm bg-white p-3 h-32 overflow-y-auto custom-scrollbar">
+            <select id="cat-select" wire:model.live="selectedCategories"
+                class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 bg-white">
+                <option value="">Seleccione Categoría</option>
                 @foreach ($categories as $category)
-                    <div class="flex items-center mb-1 last:mb-0">
-                        <input type="checkbox" id="cat-{{ $category->id }}" value="{{ $category->id }}"
-                            wire:model.live="selectedCategories"
-                            class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
-                        <label for="cat-{{ $category->id }}"
-                            class="ml-2 text-sm text-gray-700 cursor-pointer select-none">
-                            {{ $category->name }}
-                        </label>
-                    </div>
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
                 @endforeach
-            </div>
+            </select>
         </div>
 
         {{-- Selector de Marcas --}}
         <div class="flex flex-col">
             <div class="flex justify-between items-center mb-2">
-                <label class="block text-sm font-bold text-gray-700">Marcas</label>
-                @if (count($selectedBrands) > 0)
-                    <button wire:click="clearBrandFilters"
-                        class="text-[10px] text-red-500 hover:underline font-bold uppercase">
-                        Limpiar ({{ count($selectedBrands) }})
-                    </button>
-                @endif
+                <label for="brand-select" class="block text-sm font-bold text-gray-700">Marcas</label>
             </div>
-
-            <div class="w-full border border-gray-300 rounded-lg shadow-sm bg-white p-3 h-32 overflow-y-auto custom-scrollbar">
+            <select id="brand-select" wire:model.live="selectedBrands" |
+                class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-green-500 h-32">
+                <option value="">Seleccione Marca</option>
                 @foreach ($brands as $brand)
-                    <div class="flex items-center mb-1 last:mb-0">
-                        <input type="checkbox" id="brand-{{ $brand->id }}" value="{{ $brand->id }}"
-                            wire:model.live="selectedBrands"
-                            class="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500">
-                        <label for="brand-{{ $brand->id }}"
-                            class="ml-2 text-sm text-gray-700 cursor-pointer select-none">
-                            {{ $brand->name }}
-                        </label>
-                    </div>
+                    <option value="{{ $brand->id }}">{{ $brand->name }}</option>
                 @endforeach
-            </div>
+            </select>
         </div>
 
         {{-- Nombre del producto --}}
@@ -91,11 +47,11 @@
         </div>
     </div>
 
-    <hr class="mb-4">
+
 
     {{-- Cantidad de registros a mostrar y paginación de ser necesario --}}
-    <div class="flex justify-between items-center mb-4">
-        {{-- Cantidad de registros a mostrar --}}
+    {{-- <div class="flex justify-between items-center mb-4">
+
         <div class="flex items-center space-x-2">
             <label for="perPage" class="text-sm text-gray-700 font-medium">Mostrar:</label>
             <select wire:model.live="perPage" id="perPage"
@@ -108,13 +64,12 @@
             </select>
         </div>
 
-        {{-- Paginación de ser Necesario --}}
         @if ($products->count())
             <div class="flex justify-between">
                 {{ $products->links() }}
             </div>
         @endif
-    </div>
+    </div> --}}
 
     {{-- Contenido Principal: Tarjeta con Productos --}}
     <main class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
@@ -186,9 +141,19 @@
 
     <div class="mt-8 border-t pt-6">
         @if ($products->hasPages())
-            {{-- Si hay más de una página, muestra los controles de paginación estándar --}}
-            {{ $products->links() }}
-        @elseif($products->count() < $perpage)
+            <div class="flex flex-col items-center justify-center space-y-4">
+                {{-- Primera línea: Los botones de las páginas centrados --}}
+                <div class="flex justify-center w-full pagination-links gap-8">
+                    <div class="pagination-links">
+                        {{ $products->links() }}
+                    </div>
+                </div>
+
+                {{-- Segunda línea: El texto de "Mostrando..." centrado --}}
+                {{-- Nota: Livewire suele incluir este texto dentro de $products->links().
+                 Para separarlo, aplicamos CSS al contenedor superior o usamos una vista personalizada --}}
+            </div>
+        @elseif($products->count() < $perPage)
             {{-- Si hay productos pero no alcanzan para una segunda página --}}
             <div class="flex justify-center items-center p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
                 <span class="text-gray-500 font-medium italic">

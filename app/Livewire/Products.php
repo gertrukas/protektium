@@ -16,6 +16,7 @@ class Products extends Component
     public $brands;
 
     // Propiedades como arreglos para selección múltiple
+
     public $selectedCategories = [];
     public $selectedBrands = [];
     public $searchQuery = '';
