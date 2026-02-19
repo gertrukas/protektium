@@ -37,39 +37,20 @@
         </div>
 
         {{-- Nombre del producto --}}
-        <div class="relative">
+        <div class="mb-4">
             <label class="block text-sm font-bold text-gray-700 mb-2">Nombre del Producto</label>
 
-            <input wire:model.live="searchQuery" type="text" placeholder="Buscar por nombre..."
-                class="w-full border-gray-300 rounded-lg pl-10 focus:ring-blue-500">
-            <span> <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-gray-400"></i></span>
+            <div class="relative flex items-center">
+                <input wire:model.live="searchQuery" type="text" placeholder="Buscar por nombre..."
+                    class="w-full border-gray-300 rounded-lg pr-10 focus:ring-blue-500">
 
+                <span class="absolute inset-y-0 right-4 flex items-center pr-3">
+                    <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+                </span>
+            </div>
         </div>
     </div>
 
-
-
-    {{-- Cantidad de registros a mostrar y paginación de ser necesario --}}
-    {{-- <div class="flex justify-between items-center mb-4">
-
-        <div class="flex items-center space-x-2">
-            <label for="perPage" class="text-sm text-gray-700 font-medium">Mostrar:</label>
-            <select wire:model.live="perPage" id="perPage"
-                class="border border-gray-300 rounded-md shadow-sm py-1.5 pl-3 pr-8 focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-sm appearance-none bg-white">
-                <option value="12">12</option>
-                <option value="24">24</option>
-                <option value="48">48</option>
-                <option value="96">96</option>
-                <option value="todos">Todos</option>
-            </select>
-        </div>
-
-        @if ($products->count())
-            <div class="flex justify-between">
-                {{ $products->links() }}
-            </div>
-        @endif
-    </div> --}}
 
     {{-- Contenido Principal: Tarjeta con Productos --}}
     <main class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
@@ -148,10 +129,6 @@
                         {{ $products->links() }}
                     </div>
                 </div>
-
-                {{-- Segunda línea: El texto de "Mostrando..." centrado --}}
-                {{-- Nota: Livewire suele incluir este texto dentro de $products->links().
-                 Para separarlo, aplicamos CSS al contenedor superior o usamos una vista personalizada --}}
             </div>
         @elseif($products->count() < $perPage)
             {{-- Si hay productos pero no alcanzan para una segunda página --}}
