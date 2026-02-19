@@ -1,5 +1,9 @@
 <div class="container mx-auto p-4">
-    @include('layouts.breadcrumb-productos')
+    {{-- @include('layouts.breadcrumb-productos') --}}
+    {{ Breadcrumbs::render('category') }}
+
+
+
     <div class="flex justify-end mt-4 pb-8">
         <a href="/"
             class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded
