@@ -1,6 +1,5 @@
 <div class="container mx-auto p-4">
-    {{-- @include('layouts.breadcrumb-productos') --}}
-    {{ Breadcrumbs::render('category') }}
+    @include('layouts.breadcrumb-productos')
 
 
 
