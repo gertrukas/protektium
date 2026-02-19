@@ -88,6 +88,7 @@
 
     @include('layouts.principal-header')
 
+
     @yield('content')
     <div class="bg-gray-100">
         {{ $slot }}
