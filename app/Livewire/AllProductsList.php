@@ -14,25 +14,17 @@ class AllProductsList extends Component
     public $destacado;
     public string $title;
 
-    // 1. NUEVA PROPIEDAD: Para guardar el término de búsqueda
     public string $search = '';
 
-    // Opcional: Para resetear la paginación al cambiar el filtro o la búsqueda
-    // Mantenemos 'destacado' y añadimos 'search'
     protected $queryString = ['destacado', 'search'];
-
-    // HOOK para resetear la paginación al cambiar el término de búsqueda
-    // El método se llama automáticamente cada vez que se actualiza $search
     public function updatedSearch()
     {
-        // 2. NUEVO MÉTODO: Reinicia la paginación a la página 1
         $this->resetPage(); //
     }
 
     public function mount($destacado = null)
     {
         $this->destacado = $destacado;
-        // La lógica para $this->title se mantiene igual...
         if ($this->destacado == 1) {
             $this->title = 'TODOS LOS ARTÍCULOS EN PROMOCIÓN';
         } elseif ($this->destacado == 0) {
@@ -58,7 +50,7 @@ class AllProductsList extends Component
             // Usamos un grupo de clausulas WHERE para buscar en múltiples campos (name Y description)
             $query->where(function (Builder $q) use ($searchTerm) {
                 $q->where('name', 'like', $searchTerm)
-                  ->orWhere('description', 'like', $searchTerm);
+                    ->orWhere('description', 'like', $searchTerm);
             });
         }
 

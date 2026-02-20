@@ -13,11 +13,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', Welcome::class)->name('home');
 
+
+
 Route::get('/productos/todos/{destacado?}', AllProductsList::class)
     ->name('products.index');
 
 Route::get('/blog/{slug}', ShowBlog::class)->name('blog.show');
-
 Route::get('/comunicados', BlogIndex::class)->name('blogs.index');
 
 Route::get('/aviso-de-privacidad', function () {

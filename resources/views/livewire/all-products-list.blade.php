@@ -1,5 +1,4 @@
 <div class="container mx-auto p-4">
-
     <header class="flex justify-between items-center mb-6">
         <div class="flex justify-start mt-4 pb-8">
             <a href="/"

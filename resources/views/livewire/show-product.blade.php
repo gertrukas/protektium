@@ -1,16 +1,9 @@
 <div class="container mx-auto p-4">
-    @include('layouts.breadcrumb-productos')
-
-
+    {{ Breadcrumbs::render('producto', $product) }}
 
     <div class="flex justify-end mt-4 pb-8">
 
         <div class="container mx-auto p-4 ">
-
-            @include('layouts.breadcrumb-productos')
-
-
-
 
             <div class="mt-4">
 

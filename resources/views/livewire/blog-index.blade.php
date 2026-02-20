@@ -1,6 +1,6 @@
 <div>
     <main class="container mx-auto p-4">
-
+        {{ Breadcrumbs::render('blogs.index') }}
         <header class="flex justify-between items-center mb-6">
 
             <div class="text-3xl font-bold text-center flex-grow">
