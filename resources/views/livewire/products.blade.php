@@ -3,11 +3,6 @@
 
     {{ Breadcrumbs::render('productos') }}
     <div class="container mx-auto p-4 mt-4 bg-gray-100">
-        <div class="bg-yellow-100 p-2 mb-4 text-sm">
-            Categoría: {{ $selectedCategories ?? 'vacío' }} |
-            Marca: {{ $selectedBrands ?? 'vacío' }} |
-            Búsqueda: {{ $searchQuery ?? 'vacío' }}
-        </div>
 
         {{-- Filtros --}}
 
