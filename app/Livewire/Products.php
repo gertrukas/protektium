@@ -17,8 +17,10 @@ class Products extends Component
 
     // Propiedades como arreglos para selección múltiple
 
-    public $selectedCategories = [];
-    public $selectedBrands = [];
+    // public $selectedCategories = [];
+    // public $selectedBrands = [];
+    public $selectedCategories = '';
+    public $selectedBrands = '';
     public $searchQuery = '';
     public $perPage = 12;
 
@@ -38,18 +40,26 @@ class Products extends Component
         $productsQuery = Product::with(['categories', 'brand']);
 
         // 1. Filtro por Categorías
+        // if (!empty($this->selectedCategories)) {
+        //     $categoryIds = array_map('intval', (array)$this->selectedCategories);
+        //     $productsQuery->whereHas('categories', function ($query) use ($categoryIds) {
+        //         $query->whereIn('product_category_id', $categoryIds);
+        //     });
+        // }
         if (!empty($this->selectedCategories)) {
-            $categoryIds = array_map('intval', (array)$this->selectedCategories);
-            $productsQuery->whereHas('categories', function ($query) use ($categoryIds) {
-                $query->whereIn('product_category_id', $categoryIds);
+            $productsQuery->whereHas('categories', function ($query) {
+                $query->where('product_category_id', (int)$this->selectedCategories);
             });
         }
 
         // 2. Filtro por Marcas
-        if (!empty($this->selectedBrands)) {
+        // if (!empty($this->selectedBrands)) {
 
-            $brandIds = array_map('intval', (array)$this->selectedBrands);
-            $productsQuery->whereIn('brand_id', $brandIds);
+        //     $brandIds = array_map('intval', (array)$this->selectedBrands);
+        //     $productsQuery->whereIn('brand_id', $brandIds);
+        // }
+        if (!empty($this->selectedBrands)) {
+            $productsQuery->whereIn('brand_id', [(int)$this->selectedBrands]);
         }
 
         // 3. Filtro por Búsqueda
@@ -84,13 +94,13 @@ class Products extends Component
     // Métodos de limpieza independientes
     public function clearCategoryFilters()
     {
-        $this->reset('selectedCategories');
+        $this->selectedCategories = '';
         $this->resetPage();
     }
 
     public function clearBrandFilters()
     {
-        $this->reset('selectedBrands');
+        $this->selectedBrands = '';
         $this->resetPage();
     }
 
