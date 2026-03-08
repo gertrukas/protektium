@@ -98,7 +98,15 @@ class ProductForm
                     ->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
                         $originalName = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
                         $extension    = $file->getClientOriginalExtension();
-                        return time() . '_' . $originalName . '.' . $extension;
+                        $slug         = \Illuminate\Support\Str::slug($originalName);
+
+                        // Generar sufijo de 2 chars y verificar que no exista en storage
+                        do {
+                            $unique   = substr(md5(uniqid('', true)), 0, 2);
+                            $filename = $unique . '_' . $slug  .  '.' . $extension;
+                        } while (\Illuminate\Support\Facades\Storage::disk('public')->exists('products/' . $filename));
+
+                        return $filename;
                     }),
 
             ]);
