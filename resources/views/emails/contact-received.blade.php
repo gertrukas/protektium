@@ -78,7 +78,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1 style="margin: 0;">protektium.ocom</h1>
+            <h1 style="margin: 0;">protektium.com</h1>
         </div>
 
         <p>Estimado/a <strong>{{ $name }}</strong>,</p>
