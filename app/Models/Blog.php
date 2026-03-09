@@ -19,7 +19,7 @@ class Blog extends Model
         'slug',
         'description',
         'content',
-        'image',
+        'images',
         'is_published',
         'published_at'
     ];
@@ -29,9 +29,9 @@ class Blog extends Model
         return [
             'is_published' => 'boolean',
             'published_at' => 'date',
+            'images' => 'array',
         ];
     }
-
 
 
     public function author(): BelongsTo
@@ -43,5 +43,4 @@ class Blog extends Model
     {
         return $this->belongsToMany(Category::class);
     }
-
 }

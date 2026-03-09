@@ -15,11 +15,11 @@ return new class extends Migration
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Author::class)->comment('Autor');
-            $table->string('title',150)->comment('Título');
+            $table->string('title', 150)->comment('Título');
             $table->string('slug')->unique()->comment('Slug');
-            $table->mediumText('description')->nullable()->comment('Descripción');
+            $table->text('description')->nullable()->comment('Descripción');
             $table->mediumText('content')->comment('Contenido');
-            $table->string('image')->nullable();
+            $table->json('images')->nullable()->comment('Imágenes');
             $table->boolean('is_published')->default(false);
             $table->timestamp('published_at')->nullable();
             $table->timestamps();

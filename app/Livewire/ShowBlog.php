@@ -8,17 +8,21 @@ use Livewire\Component; // Asegúrate de tener e importar tu modelo Blog
 class ShowBlog extends Component
 {
     public $blog;
+    public $activeImageIndex = 0;
 
     // El método 'mount' recibe el slug directamente de la URL
     public function mount($slug)
     {
-
-        $this->blog = Blog::where('slug', $slug)
-            ->firstOrFail();
+        $this->blog = Blog::where('slug', $slug)->firstOrFail();
     }
 
     public function render()
     {
         return view('livewire.show-blog')->layout('layouts.principal-productos');;
+    }
+
+    public function setActiveImage($index)
+    {
+        $this->activeImageIndex = $index;
     }
 }

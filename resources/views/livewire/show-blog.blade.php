@@ -1,16 +1,17 @@
 <div class="w-full">
 
-    {{ Breadcrumbs::render('blog.show', $blog->title) }}   
-   
+    {{ Breadcrumbs::render('blog.show', $blog->title) }}
+
     <div class="container mx-auto p-4">
         <!-- COLUMNA IZQUIERDA: Imagen + autor/fecha -->
         <div class="flex flex-col gap-6">
             <!-- Imagen -->
-            @include('livewire.imagen-blog')
+
+            @include('livewire.slider-imagenes-blog')
 
             <!-- Autor y fecha en un solo renglón -->
             <div class="flex justify-between items-center text-sm text-gray-600">
-                
+
                 <div>
                     {{ $blog->published_at->format('j F Y') }}
                     <!-- o: {{ $blog->published_at->translatedFormat('j \de F \de Y') }} -->
@@ -38,13 +39,13 @@
             </div>
         </div>
 
-         <div class="flex justify-end mt-4 pb-8">
+        <div class="flex justify-end mt-4 pb-8">
             <a href="/"
                 class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded
                 transition-colors duration-300 shadow-lg">
                 &larr; REGRESAR
             </a>
         </div>
-    
+
     </div>
 </div>

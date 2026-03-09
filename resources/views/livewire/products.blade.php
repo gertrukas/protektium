@@ -55,6 +55,7 @@
             @forelse ($products as $product)
                 <!--- Card de Producto --->
                 <div class="grid grid-rows-subgrid row-span-4 bg-white p-2 gap-1 -tarjeta-pdcto">
+
                     <div class="">
                         @php
                             $imageExists = false;
@@ -76,6 +77,8 @@
                                     class="w-full h-full object-cover rounded-xl">
                             </a>
                         @endif
+                        {{-- @include('livewire.slider-imagenes-producto') --}}
+
                     </div>
 
                     <div class="p-0">

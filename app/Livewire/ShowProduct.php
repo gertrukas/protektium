@@ -15,13 +15,14 @@ class ShowProduct extends Component
         $this->product = Product::where('slug', $slug)->firstOrFail();
     }
 
-    public function setActiveImage($index)
-    {
-        $this->activeImageIndex = $index;
-    }
 
     public function render()
     {
         return view('livewire.show-product');
+    }
+
+    public function setActiveImage($index)
+    {
+        $this->activeImageIndex = $index;
     }
 }
