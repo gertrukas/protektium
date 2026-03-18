@@ -27,7 +27,7 @@ Route::get('/aviso-de-privacidad', function () {
     $_descripcion = 'En Protektium reespetamos las regulaciones para la protección de datos';
 
     return view('aviso-de-privacidad', compact('title', 'canonical', '_descripcion'));
-});
+})->name('aviso-de-privacidad');;
 
 
 
