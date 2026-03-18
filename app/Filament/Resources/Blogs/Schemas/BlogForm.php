@@ -8,6 +8,7 @@ use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Schema;
@@ -56,19 +57,16 @@ class BlogForm
                         'requiredIf' => 'La fecha de publicación es obligatoria cuando el contenido está marcado como publicado.',
                     ]),
 
-                RichEditor::make('description')
+                Textarea::make('description')
                     ->label('Intro')
-                    ->maxLength(255)
-                    ->extraAttributes([
-                        'style' => 'height: 200px; overflow-y: auto;',
-                    ])
+                    ->rows(3)
                     ->columnSpanFull(),
 
                 RichEditor::make('content')
                     ->label('Contenido')
                     ->columnSpanFull()
                     ->extraAttributes([
-                        'style' => 'height: 200px; overflow-y: auto;',
+                        'style' => ' overflow-y: auto;',
                     ]),
 
                 FileUpload::make('images')

@@ -6,6 +6,7 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Group;
 use Filament\Schemas\Schema;
@@ -30,16 +31,14 @@ class ProductForm
                                 'unique'   => 'Este nombre ya existe. Por favor, elige uno diferente.',
                             ])
                             ->columnSpanFull(),
-                        TextInput::make('short_description')
-                            ->label('Descripción Corta')
-                            ->maxLength(255),
+                       
                         Select::make('brand_id')
                             ->relationship('brand', 'name')
                             ->label('Marca')
-                            ->required(),
-
+                            ->required()
                     ]),
 
+                
                 Group::make()
                     ->columns(2)
                     ->schema([
@@ -57,14 +56,17 @@ class ProductForm
                             ->label('Destacado?')
                             ->required(),
                     ]),
-
-
+                    
+                Textarea::make('short_description')
+                            ->label('Descripción Corta')
+                            ->columnSpanFull()
+                            ->rows(3),
 
                 RichEditor::make('description')
                     ->label('Descripción')
                     ->columnSpanFull()
                     ->extraAttributes([
-                        'style' => 'height: 70vh; overflow-y: auto;',
+                        'style' => 'height: 80vh; overflow-y: auto;',
                     ]),
 
                 TextInput::make('stock')

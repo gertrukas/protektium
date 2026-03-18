@@ -36,6 +36,17 @@ class AdminPanelProvider extends PanelProvider
                 'secondary' => '#50623A',
             ])
             ->darkMode(true)
+            ->renderHook(
+                PanelsRenderHook::HEAD_END,
+                fn () => '<style>
+                    .fi-input-wrp.fi-fo-rich-editor { display: block !important; width: 100% !important; }
+                    .fi-fo-rich-editor-main { display: flex !important; flex-direction: column !important; min-height: 300px !important; max-height: 55vh !important; border: 1px solid #e2e8f0 !important; border-radius: .375rem !important; overflow: hidden !important; }
+                    .fi-fo-rich-editor-toolbar { position: sticky !important; top: 0 !important; z-index: 99 !important; background: #111827 !important; color: #f9fafb !important; border-bottom: 1px solid #374151 !important; }
+                    .fi-fo-rich-editor-toolbar button, .fi-fo-rich-editor-toolbar [role="button"] { color: #f9fafb !important; }
+                    .fi-fo-rich-editor-content { flex: 1 1 auto !important; min-height: 0 !important; overflow-y: auto !important; overflow-x: hidden !important; }
+                    .fi-fo-rich-editor-content [contenteditable] { min-height: 15rem !important; }
+                </style>',
+            )
             ->renderHook(PanelsRenderHook::BODY_START,fn() => '
                 <style>
                     .fi-ta-cell{
