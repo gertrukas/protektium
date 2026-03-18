@@ -18,7 +18,9 @@
             <div class="grid grid-rows-subgrid row-span-3 bg-white p-2 gap-1 -tarjeta-pdcto">
 
                 <div class="h-48 p-2">
+                    
                     @php
+                        
                         $imageExists = false;
                         $imagePath = '';
                         if (!empty($item->images) && is_array($item->images) && count($item->images) > 0) {

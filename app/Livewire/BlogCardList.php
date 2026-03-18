@@ -20,6 +20,7 @@ class BlogCardList extends Component
             ->limit($this->limit)
             ->get();
 
+
         return view('livewire.blog-card-list', [
             'items' => $items,
         ]);

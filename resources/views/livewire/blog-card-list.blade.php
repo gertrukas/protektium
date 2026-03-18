@@ -16,15 +16,19 @@
                 <div class="grid grid-rows-subgrid row-span-3 bg-white p-2 gap-1 -tarjeta-pdcto">
 
                     <div class="flex items-center justify-center">
+                    
                         @php
+
                             $imageExists = false;
                             $imagePath = '';
+
                             if (!empty($item->image) && is_array($item->imags) && count($item->imags) > 0) {
                                 $imagePath = $item->image;
                                 $imageExists = Storage::disk('public')->exists($imagePath);
+                                
                             }
                         @endphp
-
+            <p>
                         @if ($imageExists)
                             <img src="{{ asset('storage/' . $item->images) }}" alt="{{ $item->name }}"
                                 class="w-full h-full object-cover rounded-xl">
