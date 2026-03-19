@@ -49,6 +49,10 @@ class BlogIndex extends Component
             $query->where('title', 'like', '%'.$this->search.'%');
         }
 
+        if (! is_null($this->isPublished)) {
+            $query->where('is_published', $this->isPublished);
+        }
+
         $blogs = $query->latest('published_at')->paginate(6);
 
         return view('livewire.blog-index', [

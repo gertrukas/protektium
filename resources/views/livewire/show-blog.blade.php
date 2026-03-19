@@ -13,8 +13,8 @@
             <div class="flex justify-between items-center text-sm text-gray-600">
 
                 <div>
-                    {{ $blog->published_at->format('j F Y') }}
-                    <!-- o: {{ $blog->published_at->translatedFormat('j \de F \de Y') }} -->
+                    {{ $blog->published_at?->format('j F Y') ?? 'Sin fecha' }}
+                    {{-- o: {{ $blog->published_at->translatedFormat('j \de F \de Y') }} --}}
                 </div>
                 <div class="font-medium text-gray-900">
                     {{ $blog->author->name }}
