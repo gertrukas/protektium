@@ -18,19 +18,17 @@
                     <div class="flex items-center justify-center">
                     
                         @php
-
                             $imageExists = false;
                             $imagePath = '';
 
-                            if (!empty($item->image) && is_array($item->imags) && count($item->imags) > 0) {
-                                $imagePath = $item->image;
+                            if (!empty($item->images) && is_array($item->images) && count($item->images) > 0) {
+                                $imagePath = $item->images[0];
                                 $imageExists = Storage::disk('public')->exists($imagePath);
-                                
                             }
                         @endphp
-            <p>
+
                         @if ($imageExists)
-                            <img src="{{ asset('storage/' . $item->images) }}" alt="{{ $item->name }}"
+                            <img src="{{ asset('storage/' . $imagePath) }}" alt="{{ $item->title }}"
                                 class="w-full h-full object-cover rounded-xl">
                         @else
                             <img src="{{ asset('images/generico.jpeg') }}" alt="Imagen genérica"

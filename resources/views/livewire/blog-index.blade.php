@@ -17,11 +17,6 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
             @forelse ($blogs as $blog)
-                <div class="grid grid-rows-subgrid row-span-4 bg-white p-2 gap-1 -tarjeta-pdcto">
-                    
-                </div>
-
-
                 <div
                     class="bg-white rounded-lg shadow-xl overflow-hidden h-full transform hover:scale-[1.02] transition duration-300">
 

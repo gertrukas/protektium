@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Blogs\Tables;
 
 use Filament\Actions\DeleteAction;
+use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Forms\Components\DatePicker;
 use Filament\Tables\Columns\ImageColumn;
@@ -108,6 +109,11 @@ class BlogsTable
                     ->tooltip('Eliminar'),
 
             ])
-            ->actionsColumnLabel('Acciones');
+            ->actionsColumnLabel('Acciones')
+            ->bulkActions([
+                DeleteBulkAction::make()
+                    ->label('Eliminar seleccionados')
+                    ->requiresConfirmation(),
+            ]);
     }
 }

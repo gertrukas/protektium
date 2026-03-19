@@ -2,15 +2,15 @@
         @php
             $imageExists = false;
             $imagePath = '';
-            if (!empty($blog->image)) {
-                $imagePath = $blog->image;
+            if (!empty($blog->images) && is_array($blog->images) && count($blog->images) > 0) {
+                $imagePath = $blog->images[0];
                 $imageExists = Storage::disk('public')->exists($imagePath);
             }
         @endphp
 
         @if ($imageExists)
             <a href="{{ route('blog.show', ['slug' => $blog->slug]) }}" class="">
-                <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}"
+                <img src="{{ asset('storage/' . $imagePath) }}" alt="{{ $blog->title }}"
                     class="w-full h-full object-cover">
             </a>
 
