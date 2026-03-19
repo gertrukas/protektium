@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Filament\Resources\Blogs\Tables;
 
 use Filament\Actions\DeleteAction;
@@ -21,9 +22,12 @@ class BlogsTable
             ->columns([
                 ImageColumn::make('image')
                     ->label('Imagen')
-                    ->imageWidth(50)
-                    ->imageHeight(50)
-                    ->getStateUsing(fn($record) => $record->image ? Storage::disk('public')->url($record->image) : asset('/images/generico.jpeg')),
+                    ->getStateUsing(fn($record) => $record->images[0] ?? null) // Muestra la primera imagen o null
+                    ->defaultImageUrl(asset('images/generico.jpeg'))           // Usa esta imagen si el valor es null
+                    ->imageWidth(150)
+                    ->imageHeight(150)
+                    ->disk('public'),
+
                 TextColumn::make('title')
                     ->label('Título')
                     ->sortable()
