@@ -24,12 +24,13 @@ class ProductsTable
                     ->label('Imágenes')
                     ->getStateUsing(fn($record) => $record->images[0] ?? null) // Muestra la primera imagen o null
                     ->defaultImageUrl(asset('images/generico.jpeg'))           // Usa esta imagen si el valor es null
-                    ->imageWidth(150)
-                    ->imageHeight(150)
+                    ->imageWidth(80)
+                    ->imageHeight(80)
                     ->disk('public'),
                 TextColumn::make('name')
                     ->label('Nombre')
                     ->searchable()
+                    ->wrap()
                     ->verticallyAlignStart()
                     ->sortable(),
                 TextColumn::make('brand.name')
@@ -57,12 +58,11 @@ class ProductsTable
                     ->verticallyAlignStart(),
                 TextColumn::make('short_description')
                     ->label('Descripción Corta')
-                    ->limit(50)
+                    ->limit(120)
                     ->sortable()
                     ->searchable()
                     ->wrap()
-                    ->verticallyAlignStart()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->verticallyAlignStart(),
 
                 // TextColumn::make('stock')
                 //     ->label('Existencia')
