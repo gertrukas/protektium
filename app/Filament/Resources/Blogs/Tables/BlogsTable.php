@@ -13,6 +13,7 @@ use Filament\Tables\Filters\Filter;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 use Illuminate\Contracts\Database\Query\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 
 class BlogsTable
@@ -44,7 +45,20 @@ class BlogsTable
                 ToggleColumn::make('is_published')
                     ->label('¿Publicado?')
                     ->alignCenter()
-                    ->verticallyAlignStart(),
+                    ->verticallyAlignStart()
+                    ->afterStateUpdated(function ($state, Model $record) {
+                        if ($state) {
+                            // Si el toggle se enciende, guardamos la fecha actual
+                            $record->update([
+                                'published_at' => now(),
+                            ]);
+                        } else {
+                            // Si se apaga, lo dejamos nulo
+                            $record->update([
+                                'published_at' => null,
+                            ]);
+                        }
+                    }),
                 TextColumn::make('published_at')
                     ->dateTime()
                     ->label('Publicado el')

@@ -43,10 +43,10 @@ class BlogIndex extends Component
      */
     public function render()
     {
-        $query = Blog::query();
+        $query = Blog::query()->published();
 
         if (! empty($this->search)) {
-            $query->where('title', 'like', '%'.$this->search.'%');
+            $query->where('title', 'like', '%' . $this->search . '%');
         }
 
         if (! is_null($this->isPublished)) {

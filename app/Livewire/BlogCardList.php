@@ -16,6 +16,7 @@ class BlogCardList extends Component
 
         $items = Blog::where('is_published', 1)
             ->wherenotNull('published_at')
+            ->published()
             ->inRandomOrder()
             ->limit($this->limit)
             ->get();
@@ -24,6 +25,5 @@ class BlogCardList extends Component
         return view('livewire.blog-card-list', [
             'items' => $items,
         ]);
-
     }
 }

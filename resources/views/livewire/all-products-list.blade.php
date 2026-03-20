@@ -31,7 +31,8 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
 
         @forelse ($items as $item)
-            <a href="{{ route('product.show', ['slug' => $item->slug]) }}" class="h-full">
+            TOTAL DE PRODUCTOS ACTIVOS: {{ $items->count() }}
+            {{-- <a href="{{ route('product.show', ['slug' => $item->slug]) }}" class="h-full">
 
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
 
@@ -69,7 +70,7 @@
                         </p>
                     </div>
                 </div>
-            </a>
+            </a> --}}
 
         @empty
             <h1 class="col-span-full text-center text-2xl font-bold text-gray-700">

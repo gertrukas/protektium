@@ -36,7 +36,7 @@ class AllProductsList extends Component
 
     public function render()
     {
-        $query = Product::query();
+        $query = Product::query()->active('is_active', 1);
 
         // Aplicar el filtro 'destacado'
         if (in_array($this->destacado, [0, 1])) {

@@ -13,8 +13,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', Welcome::class)->name('home');
 
-
-
 Route::get('/productos/todos/{destacado?}', AllProductsList::class)
     ->name('products.index');
 

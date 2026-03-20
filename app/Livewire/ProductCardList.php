@@ -18,12 +18,14 @@ class ProductCardList extends Component
         if ($this->destacadoValue) {
             $items = Product::where('destacado', $this->destacadoValue)
                 ->limit($this->limit)
+                ->active()
                 ->inRandomOrder()
                 ->get();
         } else {
 
             $items = Product::limit($this->limit)
                 ->inRandomOrder()
+                ->active()
                 ->get();
         }
 

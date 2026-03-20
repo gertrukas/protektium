@@ -37,15 +37,8 @@ class Products extends Component
     public function render()
     {
 
-        $productsQuery = Product::with(['categories', 'brand']);
+        $productsQuery = Product::with(['categories', 'brand'])->active();
 
-        // 1. Filtro por Categorías
-        // if (!empty($this->selectedCategories)) {
-        //     $categoryIds = array_map('intval', (array)$this->selectedCategories);
-        //     $productsQuery->whereHas('categories', function ($query) use ($categoryIds) {
-        //         $query->whereIn('product_category_id', $categoryIds);
-        //     });
-        // }
         if (!empty($this->selectedCategories)) {
             $productsQuery->whereHas('categories', function ($query) {
                 $query->where('product_category_id', (int)$this->selectedCategories);
