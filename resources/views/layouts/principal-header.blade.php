@@ -64,10 +64,11 @@
 
     <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
 
-    <div class="z-0">
+    <div class="-whats">
         <a href="https://wa.me/524421370329?text='hola%20Protektium" target="_blank"
-            class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition"><i
-                class="fa-brands fa-whatsapp fa-2xl"></i></a>
+            class="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition">
+            <i class="fa-brands fa-whatsapp fa-2xl"></i>
+        </a>
 
     </div>
 

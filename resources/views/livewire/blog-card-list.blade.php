@@ -8,11 +8,13 @@
 
 
     {{-- Contenedor del Grid de Tarjetas --}}
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-[auto_1fr_auto] gap-6 w-full">
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-[auto_1fr_auto] gap-6 w-full" id="blogs">
 
         @forelse ($items as $item)
-            <a href="{{ route('blog.show', ['slug' => $item->slug]) }}" class="h-full">
+            
 
+                
                 <div class="grid grid-rows-subgrid row-span-3 bg-white p-2 gap-1 -tarjeta-pdcto">
 
                     <div class="flex items-center justify-center">
@@ -26,14 +28,20 @@
                                 $imageExists = Storage::disk('public')->exists($imagePath);
                             }
                         @endphp
-
-                        @if ($imageExists)
-                            <img src="{{ asset('storage/' . $imagePath) }}" alt="{{ $item->title }}"
-                                class="w-full h-full object-cover rounded-xl">
-                        @else
-                            <img src="{{ asset('images/generico.jpeg') }}" alt="Imagen genérica"
-                                class="w-full h-full object-cover rounded-xl">
-                        @endif
+                        
+                        
+                                @if ($imageExists)
+                                    <a href="{{ route('blog.show', ['slug' => $item->slug]) }}" class="contents">
+                                        <img src="{{ asset('storage/' . $imagePath) }}" alt="{{ $item->title }}"
+                                            class="w-full h-full object-cover rounded-xl">
+                                    </a>
+                                @else
+                                    <a href="{{ route('blog.show', ['slug' => $item->slug]) }}" class="contents">
+                                        <img src="{{ asset('images/generico.jpeg') }}" alt="Imagen genérica"
+                                        class="w-full h-full object-cover rounded-xl">
+                                    </a>
+                                @endif
+                        
                     </div>
 
                     <div class="p-2">
@@ -46,10 +54,12 @@
                         </div>
                     </div>
                     <div class="text-end">
-                        <button class="-ver-mas">Ver mas</button>
+                        <a href="{{ route('blog.show', ['slug' => $item->slug]) }}" class="contents">
+                            <button class="-ver-mas">Ver mas</button>
+                        </a>
                     </div>
                 </div>
-            </a>
+            
 
         @empty
             <h1 class="col-span-full text-center text-2xl font-bold text-gray-700">

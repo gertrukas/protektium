@@ -30,7 +30,7 @@
                     @endphp
 
                     @if ($imageExists)
-                        <a href="{{ route('product.show', ['slug' => $item->slug]) }}" class="h-full">
+                        <a href="{{ route('product.show', ['slug' => $item->slug]) }}" class="contents">
                             <img src="{{ asset('storage/' . $item->images[0]) }}" alt="{{ $item->name }}"
                                 class="w-full h-full object-cover rounded-xl">
                         </a>

@@ -20,7 +20,7 @@
                 <div
                     class="bg-white rounded-lg shadow-xl overflow-hidden h-full transform hover:scale-[1.02] transition duration-300">
 
-                    @include('livewire.imagen-blog')
+                        @include('livewire.imagen-blog')
 
                     <div class="p-2">
                         <h3 class="font-bold text-xl mb-2">{{ $blog->title }}</h3>
